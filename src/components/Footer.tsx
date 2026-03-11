@@ -47,8 +47,8 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 text-sm font-semibold text-foreground">Contact Us</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> 42 Wanderlust Avenue, London, UK</li>
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0 text-primary" /> +44 20 7946 0958</li>
+              <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> 350 Fifth Avenue, Suite 4200, New York, NY 10118</li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0 text-primary" /> +1 (212) 555-0147</li>
               <li className="flex items-center gap-2"><Mail className="h-4 w-4 shrink-0 text-primary" /> hello@horizontravels.com</li>
             </ul>
           </div>

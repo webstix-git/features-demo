@@ -57,7 +57,7 @@ const FAQs = () => {
             </aside>
 
             <div className="flex-1">
-              <Accordion type="single" collapsible className="space-y-3">
+              <Accordion type="multiple" defaultValue={filtered.map((_, i) => `faq-${i}`)} className="space-y-3">
                 {filtered.map((f, i) => (
                   <AccordionItem key={i} value={`faq-${i}`} className="rounded-2xl border border-border bg-card px-6 shadow-sm">
                     <AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline">

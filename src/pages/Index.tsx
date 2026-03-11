@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, Star, Headphones, Clock, Shield, Globe } from "lucide-react";
 import { useEffect } from "react";
+import heroSea from "@/assets/hero-sea.jpg";
 
 const destinations = [
   { name: "Bali, Indonesia", img: "https://picsum.photos/seed/bali/600/400", tag: "Tropical", price: "From $1,299" },
@@ -35,7 +36,7 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/travelhero2/1920/1080')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroSea})` }} />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
         <div className="container relative mx-auto px-4">
           <div className="max-w-2xl">

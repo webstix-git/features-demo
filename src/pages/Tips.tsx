@@ -1,4 +1,5 @@
 import { Lightbulb, Home, Image, Package, MessageSquare, BookOpen, HelpCircle, Mail } from "lucide-react";
+import { useEffect } from "react";
 
 const tips = [
   {
@@ -38,44 +39,51 @@ const tips = [
   },
 ];
 
-const Tips = () => (
-  <div className="min-h-screen pt-16">
-    <section className="relative overflow-hidden py-20">
-      <div className="absolute inset-0 bg-teal-gradient opacity-95" />
-      <div className="container relative mx-auto px-4 text-center">
-        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20">
-          <Lightbulb className="h-7 w-7 text-primary" />
-        </div>
-        <h1 className="mb-4 text-4xl font-bold text-primary-foreground md:text-5xl animate-fade-in-up">
-          Sales Tips & Feature Guide
-        </h1>
-        <p className="mx-auto max-w-2xl text-lg text-primary-foreground/70 animate-fade-in-up-delay-1">
-          Pro tips for each feature on this website — insights on conversion optimization, layout choices, and best practices for pitching to clients.
-        </p>
-      </div>
-    </section>
+const Tips = () => {
+  useEffect(() => {
+    document.title = "Sales Tips — Horizon Travels";
+  }, []);
 
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid gap-6 md:grid-cols-2">
-          {tips.map((t) => (
-            <div
-              key={t.feature}
-              className="group rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1"
-            >
-              <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  <t.icon className="h-5 w-5" />
-                </div>
-                <h3 className="text-lg font-bold text-foreground">{t.feature}</h3>
-              </div>
-              <p className="text-sm leading-relaxed text-muted-foreground">{t.tip}</p>
-            </div>
-          ))}
+  return (
+    <div className="min-h-screen">
+      <section className="relative overflow-hidden py-28">
+        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/tipshero/1920/800')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-foreground/70" />
+        <div className="container relative mx-auto px-4 text-center">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/20">
+            <Lightbulb className="h-7 w-7 text-primary" />
+          </div>
+          <h1 className="mb-4 text-4xl font-bold text-primary-foreground md:text-5xl animate-fade-in-up">
+            Sales Tips & Feature Guide
+          </h1>
+          <p className="mx-auto max-w-2xl text-lg text-primary-foreground/70 animate-fade-in-up-delay-1">
+            Pro tips for each feature on this website — insights on conversion optimization, layout choices, and best practices for pitching to clients.
+          </p>
         </div>
-      </div>
-    </section>
-  </div>
-);
+      </section>
+
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-6 md:grid-cols-2">
+            {tips.map((t) => (
+              <div
+                key={t.feature}
+                className="group rounded-2xl border border-border bg-card p-6 shadow-md transition-all hover:shadow-xl hover:-translate-y-1"
+              >
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <t.icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">{t.feature}</h3>
+                </div>
+                <p className="text-sm leading-relaxed text-muted-foreground">{t.tip}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default Tips;

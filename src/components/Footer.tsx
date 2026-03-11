@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Compass, Mail, Phone, MapPin, Facebook, Instagram, Twitter, Lightbulb } from "lucide-react";
+import { Compass, Mail, Phone, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -43,11 +43,6 @@ const Footer = () => {
               <li><Link to="/testimonials" className="hover:text-primary transition-colors">Testimonials</Link></li>
               <li><Link to="/faqs" className="hover:text-primary transition-colors">FAQs</Link></li>
               <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-              <li>
-                <Link to="/tips" className="inline-flex items-center gap-1.5 hover:text-primary transition-colors">
-                  <Lightbulb className="h-3.5 w-3.5" /> Sales Tips
-                </Link>
-              </li>
             </ul>
           </div>
 

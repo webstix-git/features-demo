@@ -23,13 +23,13 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-card/95 backdrop-blur-md shadow-lg shadow-foreground/5" : "bg-transparent"}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-card shadow-lg shadow-foreground/5" : "bg-card/90 backdrop-blur-md"}`}>
       <div className="container mx-auto flex h-18 items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2.5 text-xl font-bold">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-warm-gradient shadow-md">
             <Compass className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className={`transition-colors ${scrolled ? "text-foreground" : "text-foreground"}`}>
+          <span className="text-foreground">
             Horizon <span className="font-light text-primary">Travels</span>
           </span>
         </Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
             <Link
               key={l.path}
               to={l.path}
-              className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground hover:bg-card/50"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground hover:bg-background"
             >
               {l.name}
             </Link>
@@ -64,7 +64,7 @@ const Navbar = () => {
               key={l.path}
               to={l.path}
               onClick={() => setMobileOpen(false)}
-              className="block py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground"
+              className="block py-2.5 text-sm font-medium text-foreground/70 hover:text-foreground"
             >
               {l.name}
             </Link>

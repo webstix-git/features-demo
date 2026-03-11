@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Clock, User } from "lucide-react";
 
 const posts = [
@@ -16,11 +16,16 @@ const Blog = () => {
   const [activeCat, setActiveCat] = useState("All");
   const filtered = activeCat === "All" ? posts : posts.filter((p) => p.cat === activeCat);
 
+  useEffect(() => {
+    document.title = "Travel Blog — Horizon Travels";
+  }, []);
+
   return (
     <div className="min-h-screen">
-      {/* Hero */}
+      {/* Hero with banner */}
       <section className="relative overflow-hidden py-28">
-        <div className="absolute inset-0 bg-teal-gradient" />
+        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/bloghero/1920/800')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-foreground/70" />
         <div className="container relative mx-auto px-4 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary animate-fade-in-up">Our Blog</p>
           <h1 className="mb-4 text-4xl font-bold text-primary-foreground md:text-6xl animate-fade-in-up-delay-1">Travel Stories & Tips</h1>

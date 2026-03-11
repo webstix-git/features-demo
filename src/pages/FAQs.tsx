@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import faqHero from "@/assets/faq-hero.jpg";
 
 const categories = ["All", "Booking", "Payments", "Travel Tips", "Support"];
 

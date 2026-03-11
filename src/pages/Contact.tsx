@@ -64,10 +64,10 @@ const Contact = () => {
               <h2 className="text-2xl font-bold text-foreground">Contact Info</h2>
               <div className="space-y-4">
                 {[
-                  { icon: MapPin, label: "Address", value: "42 Wanderlust Avenue\nLondon, W1D 3AH, UK" },
-                  { icon: Phone, label: "Phone", value: "+44 20 7946 0958" },
+                  { icon: MapPin, label: "Address", value: "350 Fifth Avenue, Suite 4200\nNew York, NY 10118" },
+                  { icon: Phone, label: "Phone", value: "+1 (212) 555-0147" },
                   { icon: Mail, label: "Email", value: "hello@horizontravels.com" },
-                  { icon: Clock, label: "Hours", value: "Mon-Fri: 9am - 6pm\nSat: 10am - 4pm" },
+                  { icon: Clock, label: "Hours", value: "Mon-Fri: 9am - 6pm EST\nSat: 10am - 4pm EST" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-start gap-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">

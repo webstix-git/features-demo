@@ -1,5 +1,4 @@
 import { Star } from "lucide-react";
-import SalesRepBubble from "@/components/SalesRepBubble";
 
 const testimonials = [
   { name: "Sarah Chen", role: "Bali Honeymoon", quote: "Every single detail was handled perfectly. From the private villa to the sunset dinner — it was pure magic. We didn't have to worry about a thing.", avatar: "SC", rating: 5 },
@@ -11,30 +10,32 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <div className="min-h-screen pt-16">
-    <section className="border-b border-border bg-secondary/30 py-20">
-      <div className="container mx-auto px-4 text-center">
+  <div className="min-h-screen">
+    {/* Hero */}
+    <section className="relative overflow-hidden py-28">
+      <div className="absolute inset-0 bg-teal-gradient" />
+      <div className="container relative mx-auto px-4 text-center">
         <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary animate-fade-in-up">Real Stories</p>
-        <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl animate-fade-in-up-delay-1">What Our Travelers Say</h1>
-        <p className="mx-auto max-w-2xl text-lg text-muted-foreground animate-fade-in-up-delay-2">
+        <h1 className="mb-4 text-4xl font-bold text-primary-foreground md:text-6xl animate-fade-in-up-delay-1">What Our Travelers Say</h1>
+        <p className="mx-auto max-w-2xl text-lg text-primary-foreground/70 animate-fade-in-up-delay-2">
           Don't just take our word for it — hear from travelers who've experienced the Horizon difference.
         </p>
       </div>
     </section>
 
     {/* Marquee */}
-    <section className="overflow-hidden border-b border-border py-12">
+    <section className="overflow-hidden py-14">
       <div className="flex gap-6" style={{ animation: "marquee 30s linear infinite", width: "max-content" }}>
         {[...testimonials, ...testimonials].map((t, i) => (
-          <div key={i} className="w-80 shrink-0 rounded-xl border border-border bg-card p-5">
+          <div key={i} className="w-80 shrink-0 rounded-2xl bg-card p-5 shadow-md border border-border">
             <div className="mb-3 flex gap-0.5">
               {Array.from({ length: 5 }).map((_, s) => (
-                <Star key={s} className={`h-3.5 w-3.5 ${s < t.rating ? "fill-primary text-primary" : "text-border"}`} />
+                <Star key={s} className={`h-3.5 w-3.5 ${s < t.rating ? "fill-primary text-primary" : "text-muted"}`} />
               ))}
             </div>
             <p className="mb-4 text-sm italic text-muted-foreground">"{t.quote}"</p>
             <div className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">{t.avatar}</div>
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-warm-gradient text-xs font-bold text-primary-foreground">{t.avatar}</div>
               <div>
                 <p className="text-sm font-medium text-foreground">{t.name}</p>
                 <p className="text-xs text-muted-foreground">{t.role}</p>
@@ -46,20 +47,20 @@ const Testimonials = () => (
     </section>
 
     {/* Grid */}
-    <section className="py-16">
+    <section className="py-20 bg-card">
       <div className="container mx-auto px-4">
-        <h2 className="mb-8 text-2xl font-bold text-foreground">All Reviews</h2>
+        <h2 className="mb-10 text-3xl font-bold text-foreground">All Reviews</h2>
         <div className="grid gap-6 md:grid-cols-3">
           {testimonials.map((t, i) => (
-            <div key={i} className="rounded-xl border border-border bg-card p-6 transition-all hover:shadow-lg hover:shadow-primary/5">
+            <div key={i} className="rounded-2xl bg-background p-6 shadow-md transition-all hover:shadow-xl hover:-translate-y-1 border border-border">
               <div className="mb-3 flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, s) => (
-                  <Star key={s} className={`h-4 w-4 ${s < t.rating ? "fill-primary text-primary" : "text-border"}`} />
+                  <Star key={s} className={`h-4 w-4 ${s < t.rating ? "fill-primary text-primary" : "text-muted"}`} />
                 ))}
               </div>
-              <p className="mb-4 text-sm text-foreground">"{t.quote}"</p>
+              <p className="mb-5 text-sm text-foreground leading-relaxed">"{t.quote}"</p>
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{t.avatar}</div>
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-warm-gradient text-sm font-bold text-primary-foreground">{t.avatar}</div>
                 <div>
                   <p className="text-sm font-semibold text-foreground">{t.name}</p>
                   <p className="text-xs text-muted-foreground">{t.role}</p>
@@ -70,8 +71,6 @@ const Testimonials = () => (
         </div>
       </div>
     </section>
-
-    <SalesRepBubble feature="Testimonials" tip="Use the Marquee for high-volume B2C brands that want energy and movement. Use the Grid for B2B and SaaS clients who need detailed, scannable social proof with ratings. Testimonials near CTAs increase conversion by 34%." />
   </div>
 );
 

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, Star, Headphones, Clock, Shield, Globe } from "lucide-react";
 import { useEffect } from "react";
+import heroSea from "@/assets/hero-sea.jpg";
 
 const destinations = [
   { name: "Bali, Indonesia", img: "https://picsum.photos/seed/bali/600/400", tag: "Tropical", price: "From $1,299" },

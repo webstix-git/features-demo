@@ -1,98 +1,108 @@
-import FeaturePageTemplate from "@/components/FeaturePageTemplate";
-import VariantSection from "@/components/VariantSection";
-import { TrendingUp, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Calendar, ArrowRight } from "lucide-react";
+import SalesRepBubble from "@/components/SalesRepBubble";
 
-const caseStudies = [
+const packages = [
   {
-    client: "TechCorp Inc.",
-    challenge: "Low online conversion rates and outdated web presence causing 60% bounce rate.",
-    solution: "Complete website redesign with optimized UX flows, A/B tested landing pages, and performance optimization.",
-    results: [{ label: "Conversion Rate", value: "+127%" }, { label: "Bounce Rate", value: "-45%" }, { label: "Revenue", value: "+$2.1M" }],
-    image: "https://picsum.photos/seed/case1/600/400",
+    name: "Bali Bliss",
+    dest: "Bali, Indonesia",
+    img: "https://picsum.photos/seed/balipkg/800/500",
+    duration: "10 Days / 9 Nights",
+    price: "£2,499",
+    includes: ["5-star resort stay", "Private temple tours", "Spa & wellness retreat", "Surf lessons", "Airport transfers"],
+    highlights: "Immerse yourself in Balinese culture with private guided tours, world-class spa treatments, and stunning rice terrace treks.",
   },
   {
-    client: "FreshBite Delivery",
-    challenge: "Mobile ordering experience was clunky, leading to high cart abandonment rates of 78%.",
-    solution: "Rebuilt mobile-first checkout flow with one-tap ordering, saved payment methods, and real-time tracking.",
-    results: [{ label: "Cart Abandonment", value: "-52%" }, { label: "Mobile Orders", value: "+89%" }, { label: "Avg Order Value", value: "+23%" }],
-    image: "https://picsum.photos/seed/case2/600/400",
+    name: "Greek Island Explorer",
+    dest: "Santorini & Mykonos",
+    img: "https://picsum.photos/seed/greecepkg/800/500",
+    duration: "12 Days / 11 Nights",
+    price: "£3,299",
+    includes: ["Boutique hotel stays", "Catamaran cruise", "Wine tasting tour", "Ferry transfers", "Guided walking tours"],
+    highlights: "Island-hop through the Aegean with luxury stays, private sunset cruises, and authentic Greek culinary experiences.",
   },
   {
-    client: "EduLearn Platform",
-    challenge: "Student engagement dropping, with only 12% course completion rate across the platform.",
-    solution: "Gamified learning paths, progress dashboards, and social learning features with peer collaboration.",
-    results: [{ label: "Completion Rate", value: "+340%" }, { label: "Daily Active Users", value: "+156%" }, { label: "NPS Score", value: "72→91" }],
-    image: "https://picsum.photos/seed/case3/600/400",
+    name: "Alpine Adventure",
+    dest: "Swiss Alps",
+    img: "https://picsum.photos/seed/swisspkg/800/500",
+    duration: "7 Days / 6 Nights",
+    price: "£2,899",
+    includes: ["Mountain lodge accommodation", "Guided hikes", "Scenic train passes", "Fondue dinner experience", "Ski passes (winter)"],
+    highlights: "Conquer stunning alpine trails, ride the world's most scenic railways, and unwind in cozy mountain lodges.",
   },
 ];
 
-const galleryItems = [
-  { title: "E-commerce Redesign", category: "Web Design", image: "https://picsum.photos/seed/port1/600/400" },
-  { title: "SaaS Dashboard", category: "UI/UX", image: "https://picsum.photos/seed/port2/600/400" },
-  { title: "Brand Identity System", category: "Branding", image: "https://picsum.photos/seed/port3/600/400" },
-  { title: "Mobile Banking App", category: "Mobile", image: "https://picsum.photos/seed/port4/600/400" },
-  { title: "Marketing Automation", category: "Web App", image: "https://picsum.photos/seed/port5/600/400" },
-  { title: "Healthcare Portal", category: "UI/UX", image: "https://picsum.photos/seed/port6/600/400" },
+const pastTrips = [
+  { name: "Maldives Honeymoon", img: "https://picsum.photos/seed/past1/600/400", desc: "A romantic overwater villa experience for two" },
+  { name: "Japan Cultural Tour", img: "https://picsum.photos/seed/past2/600/500", desc: "14 days through Tokyo, Kyoto, and Osaka" },
+  { name: "African Safari", img: "https://picsum.photos/seed/past3/600/450", desc: "Big Five adventure in Kenya and Tanzania" },
+  { name: "Amalfi Coast Road Trip", img: "https://picsum.photos/seed/past4/600/380", desc: "Coastal drives and Italian cuisine" },
+  { name: "Patagonia Trek", img: "https://picsum.photos/seed/past5/600/420", desc: "Glaciers and granite peaks in South America" },
+  { name: "Morocco Discovery", img: "https://picsum.photos/seed/past6/600/350", desc: "From Marrakech souks to Sahara dunes" },
 ];
 
 const Portfolio = () => (
-  <FeaturePageTemplate
-    title="Portfolio & Case Studies"
-    subtitle="Prove your value with results-driven storytelling and visual showcases."
-    bullets={[
-      { text: "Case studies with specific metrics are 68% more persuasive to B2B buyers." },
-      { text: "Portfolio pages are the #2 most visited section on agency websites." },
-      { text: "Visual proof of past work increases proposal acceptance by 41%." },
-    ]}
-    proTip="Use the Results-Driven layout (Variant A) for agencies and consultancies selling on ROI. Use the Visual Gallery (Variant B) for creative studios, photographers, and design agencies that lead with aesthetics."
-  >
-    <VariantSection label="A" title="Results-Driven Case Studies">
-      <div className="space-y-8">
-        {caseStudies.map((cs, i) => (
-          <div key={i} className="overflow-hidden rounded-xl border border-border bg-card">
-            <div className="flex flex-col md:flex-row">
-              <img src={cs.image} alt={cs.client} className="h-48 w-full object-cover md:h-auto md:w-72" loading="lazy" />
-              <div className="flex-1 p-6">
-                <h4 className="mb-4 text-lg font-bold text-foreground">{cs.client}</h4>
-                <div className="mb-4 space-y-3">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-destructive">Challenge</p>
-                    <p className="text-sm text-muted-foreground">{cs.challenge}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-widest text-primary">Solution</p>
-                    <p className="text-sm text-muted-foreground">{cs.solution}</p>
-                  </div>
-                </div>
-                <div className="flex gap-6">
-                  {cs.results.map((r, j) => (
-                    <div key={j} className="text-center">
-                      <p className="text-xl font-bold text-primary">{r.value}</p>
-                      <p className="text-xs text-muted-foreground">{r.label}</p>
-                    </div>
-                  ))}
-                </div>
+  <div className="min-h-screen pt-16">
+    <section className="border-b border-border bg-secondary/30 py-20">
+      <div className="container mx-auto px-4 text-center">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary animate-fade-in-up">Our Packages</p>
+        <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl animate-fade-in-up-delay-1">Curated Travel Experiences</h1>
+        <p className="mx-auto max-w-2xl text-lg text-muted-foreground animate-fade-in-up-delay-2">
+          Handcrafted itineraries designed for unforgettable adventures. Every detail planned, every moment savored.
+        </p>
+      </div>
+    </section>
+
+    <section className="py-16">
+      <div className="container mx-auto px-4 space-y-12">
+        {packages.map((pkg, i) => (
+          <div key={pkg.name} className={`flex flex-col overflow-hidden rounded-2xl border border-border bg-card md:flex-row ${i % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
+            <div className="md:w-1/2">
+              <img src={pkg.img} alt={pkg.name} className="h-full w-full object-cover" loading="lazy" />
+            </div>
+            <div className="flex flex-col justify-center p-8 md:w-1/2">
+              <span className="mb-2 inline-block w-fit rounded-full bg-primary/10 px-3 py-0.5 text-xs font-medium text-primary">{pkg.dest}</span>
+              <h3 className="mb-2 text-2xl font-bold text-foreground">{pkg.name}</h3>
+              <p className="mb-4 text-sm text-muted-foreground">{pkg.highlights}</p>
+              <div className="mb-4 flex flex-wrap gap-4 text-xs text-muted-foreground">
+                <span className="flex items-center gap-1"><Calendar className="h-3.5 w-3.5 text-primary" /> {pkg.duration}</span>
+                <span className="text-lg font-bold text-primary">{pkg.price}<span className="text-xs font-normal text-muted-foreground"> / person</span></span>
+              </div>
+              <ul className="mb-6 space-y-1">
+                {pkg.includes.map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" /> {item}
+                  </li>
+                ))}
+              </ul>
+              <Link to="/contact" className="inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105">
+                Book This Trip <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section className="border-t border-border bg-secondary/30 py-16">
+      <div className="container mx-auto px-4">
+        <h2 className="mb-8 text-2xl font-bold text-foreground">Past Trip Highlights</h2>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {pastTrips.map((t) => (
+            <div key={t.name} className="group relative overflow-hidden rounded-xl border border-border">
+              <img src={t.img} alt={t.name} className="aspect-[4/3] w-full object-cover transition-transform group-hover:scale-110" loading="lazy" />
+              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-foreground/70 to-transparent p-5 opacity-0 group-hover:opacity-100 transition-opacity">
+                <h4 className="text-lg font-bold text-primary-foreground">{t.name}</h4>
+                <p className="text-sm text-primary-foreground/80">{t.desc}</p>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </VariantSection>
+    </section>
 
-    <VariantSection label="B" title="Visual Gallery with Hover Descriptions">
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {galleryItems.map((item, i) => (
-          <div key={i} className="group relative overflow-hidden rounded-lg border border-border">
-            <img src={item.image} alt={item.title} className="aspect-[4/3] w-full object-cover transition-transform group-hover:scale-110" loading="lazy" />
-            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-foreground/80 to-transparent p-5 opacity-0 transition-opacity group-hover:opacity-100">
-              <span className="mb-1 text-xs font-medium text-primary-foreground/80">{item.category}</span>
-              <h4 className="text-lg font-bold text-primary-foreground">{item.title}</h4>
-            </div>
-          </div>
-        ))}
-      </div>
-    </VariantSection>
-  </FeaturePageTemplate>
+    <SalesRepBubble feature="Packages / Portfolio" tip="Use the results-driven layout for clients selling services — it builds trust with specifics. The visual gallery with hover descriptions works great for creative agencies showcasing past work." />
+  </div>
 );
 
 export default Portfolio;

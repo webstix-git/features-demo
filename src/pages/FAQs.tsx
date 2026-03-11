@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import faqHero from "@/assets/faq-hero.jpg";
 
 const categories = ["All", "Booking", "Payments", "Travel Tips", "Support"];
 
@@ -26,7 +27,7 @@ const FAQs = () => {
     <div className="min-h-screen">
       {/* Hero with banner */}
       <section className="relative overflow-hidden py-28">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/faqhero/1920/800')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${faqHero})` }} />
         <div className="absolute inset-0 bg-foreground/70" />
         <div className="container relative mx-auto px-4 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary animate-fade-in-up">Help Center</p>
@@ -56,7 +57,7 @@ const FAQs = () => {
             </aside>
 
             <div className="flex-1">
-              <Accordion type="single" collapsible className="space-y-3">
+              <Accordion type="multiple" defaultValue={filtered.map((_, i) => `faq-${i}`)} className="space-y-3">
                 {filtered.map((f, i) => (
                   <AccordionItem key={i} value={`faq-${i}`} className="rounded-2xl border border-border bg-card px-6 shadow-sm">
                     <AccordionTrigger className="text-left text-sm font-semibold text-foreground hover:no-underline">

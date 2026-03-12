@@ -7,7 +7,7 @@ const packages = [
   {
     name: "The Classic Build",
     dest: "Custom Homes",
-    img: "https://picsum.photos/seed/pkg1/800/500",
+    img: "/images/project-1.jpg",
     duration: "8-12 Months",
     price: "$350K+",
     includes: ["Custom floor plan design", "Premium materials & finishes", "Energy-efficient systems", "Landscaping package", "1-year warranty walkthrough"],

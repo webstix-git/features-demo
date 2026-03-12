@@ -7,7 +7,7 @@ const packages = [
   {
     name: "The Classic Build",
     dest: "Custom Homes",
-    img: "https://picsum.photos/seed/pkg1/800/500",
+    img: "/images/project-1.jpg",
     duration: "8-12 Months",
     price: "$350K+",
     includes: ["Custom floor plan design", "Premium materials & finishes", "Energy-efficient systems", "Landscaping package", "1-year warranty walkthrough"],
@@ -16,7 +16,7 @@ const packages = [
   {
     name: "Modern Living",
     dest: "Contemporary Homes",
-    img: "https://picsum.photos/seed/pkg2/800/500",
+    img: "/images/project-2.jpg",
     duration: "10-14 Months",
     price: "$480K+",
     includes: ["Open-concept floor plans", "Floor-to-ceiling windows", "Smart home integration", "Rooftop terrace option", "Sustainable materials"],
@@ -25,7 +25,7 @@ const packages = [
   {
     name: "Complete Renovation",
     dest: "Renovation Services",
-    img: "https://picsum.photos/seed/pkg3/800/500",
+    img: "/images/blog-3.jpg",
     duration: "3-6 Months",
     price: "$120K+",
     includes: ["Full design consultation", "Structural assessment", "Kitchen & bath remodel", "Electrical & plumbing upgrades", "Project management"],
@@ -34,12 +34,12 @@ const packages = [
 ];
 
 const pastProjects = [
-  { name: "Harborview Estate", img: "https://picsum.photos/seed/past1b/600/400", desc: "Waterfront luxury home with private dock" },
-  { name: "Lincoln Park Reno", img: "https://picsum.photos/seed/past2b/600/500", desc: "Full gut renovation of a 1920s brownstone" },
-  { name: "Mountain View Lodge", img: "https://picsum.photos/seed/past3b/600/450", desc: "Timber-frame lodge with panoramic views" },
-  { name: "Downtown Loft", img: "https://picsum.photos/seed/past4b/600/380", desc: "Industrial loft conversion with exposed brick" },
-  { name: "Greenfield Farmhouse", img: "https://picsum.photos/seed/past5b/600/420", desc: "Modern farmhouse on 5 acres" },
-  { name: "The Evergreen", img: "https://picsum.photos/seed/past6b/600/350", desc: "Net-zero energy family home" },
+  { name: "Harborview Estate", img: "/images/project-8.jpg", desc: "Waterfront luxury home with private dock" },
+  { name: "Lincoln Park Reno", img: "/images/after-2.jpg", desc: "Full gut renovation of a 1920s brownstone" },
+  { name: "Mountain View Lodge", img: "/images/project-7.jpg", desc: "Timber-frame lodge with panoramic views" },
+  { name: "Downtown Loft", img: "/images/after-1.jpg", desc: "Industrial loft conversion with exposed brick" },
+  { name: "Greenfield Farmhouse", img: "/images/project-9.jpg", desc: "Modern farmhouse on 5 acres" },
+  { name: "The Evergreen", img: "/images/after-3.jpg", desc: "Net-zero energy family home" },
 ];
 
 const features = [
@@ -58,7 +58,7 @@ const Portfolio = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative overflow-hidden py-28">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/porthero/1920/800')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/images/hero-portfolio.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-foreground/70" />
         <div className="container relative mx-auto px-4 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-accent animate-fade-in-up">Our Portfolio</p>

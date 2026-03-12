@@ -37,7 +37,7 @@ const FAQs = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative overflow-hidden py-28">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/faqhero2/1920/800')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/images/hero-faq.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-foreground/70" />
         <div className="container relative mx-auto px-4 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-accent animate-fade-in-up">Help Center</p>

@@ -7,8 +7,8 @@ const caseStudies = [
   {
     title: "The Oakwood Estate",
     client: "Mitchell Family",
-    before: "https://picsum.photos/seed/csbefore1/800/500",
-    after: "https://picsum.photos/seed/csafter1/800/500",
+    before: "/images/before-1.jpg",
+    after: "/images/after-1.jpg",
     challenge: "The family needed a 4-bedroom home on a sloping lot with limited road access and strict zoning requirements.",
     solution: "We designed a split-level layout that worked with the terrain, used retaining walls creatively, and navigated the zoning process end-to-end.",
     result: "Completed 2 weeks ahead of schedule. The home appraised at 15% above build cost. The family moved in before school started.",
@@ -19,8 +19,8 @@ const caseStudies = [
   {
     title: "Lincoln Park Brownstone",
     client: "Chen & Torres",
-    before: "https://picsum.photos/seed/csbefore2/800/500",
-    after: "https://picsum.photos/seed/csafter2/800/500",
+    before: "/images/before-2.jpg",
+    after: "/images/after-2.jpg",
     challenge: "A 100-year-old brownstone needed a full gut renovation while preserving the historic facade per city regulations.",
     solution: "We carefully deconstructed the interior, reinforced the structure with modern steel framing, and installed contemporary systems behind the original brickwork.",
     result: "Featured in Architectural Digest's 'Best Renovations' list. Property value increased by 40% post-renovation.",
@@ -31,8 +31,8 @@ const caseStudies = [
   {
     title: "Greenfield Net-Zero Home",
     client: "Patel Family",
-    before: "https://picsum.photos/seed/csbefore3/800/500",
-    after: "https://picsum.photos/seed/csafter3/800/500",
+    before: "/images/before-3.jpg",
+    after: "/images/after-3.jpg",
     challenge: "The clients wanted a fully net-zero energy home without sacrificing aesthetics or comfort.",
     solution: "We used passive house principles, installed a 12kW solar array, geothermal heating, and triple-pane windows. Every material was sourced for thermal performance.",
     result: "The home produces more energy than it consumes. Utility bills average $12/month. Won the regional Green Building Award.",
@@ -58,7 +58,7 @@ const CaseStudies = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative overflow-hidden py-28">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/casehero/1920/800')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/images/hero-casestudy.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-foreground/70" />
         <div className="container relative mx-auto px-4 text-center">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-accent animate-fade-in-up">Success Stories</p>

@@ -57,7 +57,7 @@ const Tips = () => {
   return (
     <div className="min-h-screen">
       <section className="relative overflow-hidden py-28">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/tipshero2/1920/800')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/images/hero-tips.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-foreground/70" />
         <div className="container relative mx-auto px-4 text-center">
           <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/20">

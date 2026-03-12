@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import FeatureGuide from "@/components/FeatureGuide";
 
 const projects = [
-  { name: "The Oakwood Estate", img: "https://picsum.photos/seed/home1/600/400", tag: "Custom Home", price: "From $450K" },
-  { name: "Riverside Modern", img: "https://picsum.photos/seed/home2/600/500", tag: "Modern", price: "From $380K" },
-  { name: "Cedar Ridge Villa", img: "https://picsum.photos/seed/home3/600/350", tag: "Luxury", price: "From $620K" },
-  { name: "The Hartford", img: "https://picsum.photos/seed/home4/600/450", tag: "Traditional", price: "From $340K" },
-  { name: "Sunset Terrace", img: "https://picsum.photos/seed/home5/600/380", tag: "Contemporary", price: "From $510K" },
-  { name: "Maple Grove Cottage", img: "https://picsum.photos/seed/home6/600/420", tag: "Cottage", price: "From $290K" },
+  { name: "The Oakwood Estate", img: "/images/project-1.jpg", tag: "Custom Home", price: "From $450K" },
+  { name: "Riverside Modern", img: "/images/project-2.jpg", tag: "Modern", price: "From $380K" },
+  { name: "Cedar Ridge Villa", img: "/images/project-3.jpg", tag: "Luxury", price: "From $620K" },
+  { name: "The Hartford", img: "/images/project-4.jpg", tag: "Traditional", price: "From $340K" },
+  { name: "Sunset Terrace", img: "/images/project-5.jpg", tag: "Contemporary", price: "From $510K" },
+  { name: "Maple Grove Cottage", img: "/images/project-6.jpg", tag: "Cottage", price: "From $290K" },
 ];
 
 const reviews = [
@@ -22,9 +22,9 @@ const reviews = [
 ];
 
 const blogPosts = [
-  { title: "5 Trends in Custom Home Design for 2026", img: "https://picsum.photos/seed/homeblog1/600/400", cat: "Design", date: "Mar 5, 2026" },
-  { title: "How to Choose the Right Contractor", img: "https://picsum.photos/seed/homeblog2/600/400", cat: "Tips", date: "Feb 28, 2026" },
-  { title: "Kitchen Remodel: Before & After", img: "https://picsum.photos/seed/homeblog3/600/400", cat: "Renovation", date: "Feb 20, 2026" },
+  { title: "5 Trends in Custom Home Design for 2026", img: "/images/blog-1.jpg", cat: "Design", date: "Mar 5, 2026" },
+  { title: "How to Choose the Right Contractor", img: "/images/blog-2.jpg", cat: "Tips", date: "Feb 28, 2026" },
+  { title: "Kitchen Remodel: Before & After", img: "/images/blog-3.jpg", cat: "Renovation", date: "Feb 20, 2026" },
 ];
 
 const features = [
@@ -45,7 +45,7 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/buildhero/1920/1080')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/images/hero-main.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
         <div className="container relative mx-auto px-4">
           <div className="max-w-2xl">
@@ -185,7 +185,7 @@ const Index = () => {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="relative overflow-hidden rounded-3xl">
-            <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/buildpromo/1920/600')] bg-cover bg-center" />
+            <div className="absolute inset-0 bg-[url('/images/promo-banner.jpg')] bg-cover bg-center" />
             <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-foreground/30" />
             <div className="relative flex flex-col items-start justify-center p-10 md:p-16 min-h-[360px]">
               <span className="mb-3 inline-block rounded-full bg-accent px-4 py-1 text-xs font-bold text-accent-foreground uppercase tracking-wider">Spring Special</span>

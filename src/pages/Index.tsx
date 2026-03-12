@@ -45,7 +45,7 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/buildhero/1920/1080')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/images/hero-main.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
         <div className="container relative mx-auto px-4">
           <div className="max-w-2xl">

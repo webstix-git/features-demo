@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { Compass, Menu, X } from "lucide-react";
+import { Hammer, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "Destinations", path: "/destinations" },
-  { name: "Packages", path: "/packages" },
+  { name: "Gallery", path: "/destinations" },
+  { name: "Portfolio", path: "/packages" },
+  { name: "Case Studies", path: "/case-studies" },
   { name: "Blog", path: "/blog" },
   { name: "Testimonials", path: "/testimonials" },
   { name: "FAQs", path: "/faqs" },
@@ -27,14 +28,14 @@ const Navbar = () => {
       <div className="container mx-auto flex h-18 items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2.5 text-xl font-bold">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-warm-gradient shadow-md">
-            <Compass className="h-5 w-5 text-primary-foreground" />
+            <Hammer className="h-5 w-5 text-primary-foreground" />
           </div>
           <span className="text-foreground">
-            Horizon <span className="font-light text-primary">Travels</span>
+            Summit <span className="font-light text-accent">Builders</span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-1 xl:flex">
           {navLinks.map((l) => (
             <Link
               key={l.path}
@@ -48,17 +49,17 @@ const Navbar = () => {
             to="/contact"
             className="ml-3 rounded-xl bg-warm-gradient px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:shadow-lg hover:scale-105"
           >
-            Book Now
+            Get a Quote
           </Link>
         </nav>
 
-        <button className="lg:hidden text-foreground" onClick={() => setMobileOpen((p) => !p)}>
+        <button className="xl:hidden text-foreground" onClick={() => setMobileOpen((p) => !p)}>
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-card px-4 pb-4 lg:hidden">
+        <div className="border-t border-border bg-card px-4 pb-4 xl:hidden">
           {navLinks.map((l) => (
             <Link
               key={l.path}
@@ -74,7 +75,7 @@ const Navbar = () => {
             onClick={() => setMobileOpen(false)}
             className="mt-2 block rounded-xl bg-warm-gradient px-4 py-2.5 text-center text-sm font-semibold text-primary-foreground"
           >
-            Book Now
+            Get a Quote
           </Link>
         </div>
       )}

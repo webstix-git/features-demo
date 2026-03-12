@@ -1,18 +1,25 @@
 
+# Summit Builders Co. — Demo Website with Essential Features
 
-# Updated Plan: Simple Option Labels
+A demo website for a home builder business showcasing essential website features with Option A/B layout variations and a floating Feature Guide sidebar for sales reps.
 
-The only change from the approved plan is the naming convention for the A/B layout toggles. Instead of descriptive layout names (which sound too technical for clients), each toggle will use a clean code-style label:
+## Company: Summit Builders Co.
+- Tagline: "Building Dreams, One Home at a Time"
+- Logo: Hammer icon + "Summit Builders"
+- Color: Deep Forest primary (#2d4a3e), Copper accent (#c67a4a), warm off-white base
 
-| Page | Toggle Labels |
-|------|---------------|
-| **Gallery** | Gallery Option A / Gallery Option B |
-| **Portfolio** | Portfolio Option A / Portfolio Option B |
-| **Case Studies** | Case Study Option A / Case Study Option B |
-| **Blog** | Blog Option A / Blog Option B |
-| **FAQs** | FAQ Option A / FAQ Option B |
+## Pages
+- `/` — Homepage (services, project gallery, stats, testimonials marquee, blog preview, CTA)
+- `/destinations` — Gallery (Option A: Masonry grid + lightbox / Option B: Carousel)
+- `/packages` — Portfolio (Option A: Feature cards / Option B: Grid + hover overlay)
+- `/case-studies` — Case Studies (Option A: Timeline / Option B: Before & After cards)
+- `/blog` — Blog (Option A: Card grid with filters / Option B: Magazine list)
+- `/testimonials` — Testimonials (marquee + grid)
+- `/faqs` — FAQs (Option A: Category sidebar / Option B: Searchable accordion)
+- `/contact` — Contact form + company info
+- `/tips` — Sales tips reference page
 
-The underlying layouts remain the same (e.g., Gallery Option A is still masonry, Option B is still carousel) — only the user-facing label text changes. The descriptive details about what each layout does will live in the **Feature Guide sidebar** instead, where the sales rep can read about the differences.
-
-Everything else from the previous plan remains unchanged — branding, colors, FeatureGuide component, page structure, favicon, meta tags, etc.
-
+## Feature Guide
+- Floating "Feature Guide" button (bottom-right) on every page
+- Opens right-side Sheet with module descriptions and business reasons
+- Each page provides its own feature data

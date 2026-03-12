@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import FeatureGuide from "@/components/FeatureGuide";
 
 const projects = [
-  { name: "The Oakwood Estate", img: "https://picsum.photos/seed/home1/600/400", tag: "Custom Home", price: "From $450K" },
-  { name: "Riverside Modern", img: "https://picsum.photos/seed/home2/600/500", tag: "Modern", price: "From $380K" },
-  { name: "Cedar Ridge Villa", img: "https://picsum.photos/seed/home3/600/350", tag: "Luxury", price: "From $620K" },
-  { name: "The Hartford", img: "https://picsum.photos/seed/home4/600/450", tag: "Traditional", price: "From $340K" },
-  { name: "Sunset Terrace", img: "https://picsum.photos/seed/home5/600/380", tag: "Contemporary", price: "From $510K" },
-  { name: "Maple Grove Cottage", img: "https://picsum.photos/seed/home6/600/420", tag: "Cottage", price: "From $290K" },
+  { name: "The Oakwood Estate", img: "/images/project-1.jpg", tag: "Custom Home", price: "From $450K" },
+  { name: "Riverside Modern", img: "/images/project-2.jpg", tag: "Modern", price: "From $380K" },
+  { name: "Cedar Ridge Villa", img: "/images/project-3.jpg", tag: "Luxury", price: "From $620K" },
+  { name: "The Hartford", img: "/images/project-4.jpg", tag: "Traditional", price: "From $340K" },
+  { name: "Sunset Terrace", img: "/images/project-5.jpg", tag: "Contemporary", price: "From $510K" },
+  { name: "Maple Grove Cottage", img: "/images/project-6.jpg", tag: "Cottage", price: "From $290K" },
 ];
 
 const reviews = [

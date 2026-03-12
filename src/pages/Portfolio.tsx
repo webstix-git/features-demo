@@ -25,7 +25,7 @@ const packages = [
   {
     name: "Complete Renovation",
     dest: "Renovation Services",
-    img: "https://picsum.photos/seed/pkg3/800/500",
+    img: "/images/blog-3.jpg",
     duration: "3-6 Months",
     price: "$120K+",
     includes: ["Full design consultation", "Structural assessment", "Kitchen & bath remodel", "Electrical & plumbing upgrades", "Project management"],

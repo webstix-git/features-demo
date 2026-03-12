@@ -185,7 +185,7 @@ const Index = () => {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="relative overflow-hidden rounded-3xl">
-            <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/buildpromo/1920/600')] bg-cover bg-center" />
+            <div className="absolute inset-0 bg-[url('/images/promo-banner.jpg')] bg-cover bg-center" />
             <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-foreground/30" />
             <div className="relative flex flex-col items-start justify-center p-10 md:p-16 min-h-[360px]">
               <span className="mb-3 inline-block rounded-full bg-accent px-4 py-1 text-xs font-bold text-accent-foreground uppercase tracking-wider">Spring Special</span>

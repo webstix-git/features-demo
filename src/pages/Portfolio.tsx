@@ -34,12 +34,12 @@ const packages = [
 ];
 
 const pastProjects = [
-  { name: "Harborview Estate", img: "https://picsum.photos/seed/past1b/600/400", desc: "Waterfront luxury home with private dock" },
-  { name: "Lincoln Park Reno", img: "https://picsum.photos/seed/past2b/600/500", desc: "Full gut renovation of a 1920s brownstone" },
-  { name: "Mountain View Lodge", img: "https://picsum.photos/seed/past3b/600/450", desc: "Timber-frame lodge with panoramic views" },
-  { name: "Downtown Loft", img: "https://picsum.photos/seed/past4b/600/380", desc: "Industrial loft conversion with exposed brick" },
-  { name: "Greenfield Farmhouse", img: "https://picsum.photos/seed/past5b/600/420", desc: "Modern farmhouse on 5 acres" },
-  { name: "The Evergreen", img: "https://picsum.photos/seed/past6b/600/350", desc: "Net-zero energy family home" },
+  { name: "Harborview Estate", img: "/images/project-8.jpg", desc: "Waterfront luxury home with private dock" },
+  { name: "Lincoln Park Reno", img: "/images/after-2.jpg", desc: "Full gut renovation of a 1920s brownstone" },
+  { name: "Mountain View Lodge", img: "/images/project-7.jpg", desc: "Timber-frame lodge with panoramic views" },
+  { name: "Downtown Loft", img: "/images/after-1.jpg", desc: "Industrial loft conversion with exposed brick" },
+  { name: "Greenfield Farmhouse", img: "/images/project-9.jpg", desc: "Modern farmhouse on 5 acres" },
+  { name: "The Evergreen", img: "/images/after-3.jpg", desc: "Net-zero energy family home" },
 ];
 
 const features = [

@@ -4,15 +4,15 @@ import { ChevronLeft, ChevronRight, Home, Star } from "lucide-react";
 import FeatureGuide from "@/components/FeatureGuide";
 
 const projects = [
-  { name: "The Oakwood Estate", img: "https://picsum.photos/seed/gal1/800/600", desc: "4-bed custom home with wrap-around porch and chef's kitchen.", tag: "Custom Home", height: 320, rating: 4.9 },
-  { name: "Riverside Modern", img: "https://picsum.photos/seed/gal2/800/600", desc: "Sleek modern design with floor-to-ceiling windows overlooking the river.", tag: "Modern", height: 400, rating: 4.8 },
-  { name: "Cedar Ridge Villa", img: "https://picsum.photos/seed/gal3/800/600", desc: "Luxury hillside villa with infinity pool and wine cellar.", tag: "Luxury", height: 280, rating: 5.0 },
-  { name: "The Hartford", img: "https://picsum.photos/seed/gal4/800/600", desc: "Classic colonial revival with modern interior finishes.", tag: "Traditional", height: 360, rating: 4.7 },
-  { name: "Sunset Terrace", img: "https://picsum.photos/seed/gal5/800/600", desc: "Contemporary build with rooftop terrace and smart home features.", tag: "Contemporary", height: 300, rating: 4.9 },
-  { name: "Maple Grove Cottage", img: "https://picsum.photos/seed/gal6/800/600", desc: "Charming 3-bed cottage with stone fireplace and garden.", tag: "Cottage", height: 420, rating: 4.8 },
-  { name: "The Kensington", img: "https://picsum.photos/seed/gal7/800/600", desc: "Georgian-style mansion with grand foyer and library.", tag: "Luxury", height: 340, rating: 4.9 },
-  { name: "Lakeview Retreat", img: "https://picsum.photos/seed/gal8/800/600", desc: "Lakefront property with dock, boathouse, and open-plan living.", tag: "Custom Home", height: 380, rating: 4.6 },
-  { name: "The Willowbrook", img: "https://picsum.photos/seed/gal9/800/600", desc: "Farmhouse style with reclaimed wood accents and barn doors.", tag: "Farmhouse", height: 290, rating: 4.8 },
+  { name: "The Oakwood Estate", img: "/images/project-1.jpg", desc: "4-bed custom home with wrap-around porch and chef's kitchen.", tag: "Custom Home", height: 320, rating: 4.9 },
+  { name: "Riverside Modern", img: "/images/project-2.jpg", desc: "Sleek modern design with floor-to-ceiling windows overlooking the river.", tag: "Modern", height: 400, rating: 4.8 },
+  { name: "Cedar Ridge Villa", img: "/images/project-3.jpg", desc: "Luxury hillside villa with infinity pool and wine cellar.", tag: "Luxury", height: 280, rating: 5.0 },
+  { name: "The Hartford", img: "/images/project-4.jpg", desc: "Classic colonial revival with modern interior finishes.", tag: "Traditional", height: 360, rating: 4.7 },
+  { name: "Sunset Terrace", img: "/images/project-5.jpg", desc: "Contemporary build with rooftop terrace and smart home features.", tag: "Contemporary", height: 300, rating: 4.9 },
+  { name: "Maple Grove Cottage", img: "/images/project-6.jpg", desc: "Charming 3-bed cottage with stone fireplace and garden.", tag: "Cottage", height: 420, rating: 4.8 },
+  { name: "The Kensington", img: "/images/project-7.jpg", desc: "Georgian-style mansion with grand foyer and library.", tag: "Luxury", height: 340, rating: 4.9 },
+  { name: "Lakeview Retreat", img: "/images/project-8.jpg", desc: "Lakefront property with dock, boathouse, and open-plan living.", tag: "Custom Home", height: 380, rating: 4.6 },
+  { name: "The Willowbrook", img: "/images/project-9.jpg", desc: "Farmhouse style with reclaimed wood accents and barn doors.", tag: "Farmhouse", height: 290, rating: 4.8 },
 ];
 
 const features = [

@@ -22,9 +22,9 @@ const reviews = [
 ];
 
 const blogPosts = [
-  { title: "5 Trends in Custom Home Design for 2026", img: "https://picsum.photos/seed/homeblog1/600/400", cat: "Design", date: "Mar 5, 2026" },
-  { title: "How to Choose the Right Contractor", img: "https://picsum.photos/seed/homeblog2/600/400", cat: "Tips", date: "Feb 28, 2026" },
-  { title: "Kitchen Remodel: Before & After", img: "https://picsum.photos/seed/homeblog3/600/400", cat: "Renovation", date: "Feb 20, 2026" },
+  { title: "5 Trends in Custom Home Design for 2026", img: "/images/blog-1.jpg", cat: "Design", date: "Mar 5, 2026" },
+  { title: "How to Choose the Right Contractor", img: "/images/blog-2.jpg", cat: "Tips", date: "Feb 28, 2026" },
+  { title: "Kitchen Remodel: Before & After", img: "/images/blog-3.jpg", cat: "Renovation", date: "Feb 20, 2026" },
 ];
 
 const features = [

@@ -16,7 +16,7 @@ const packages = [
   {
     name: "Modern Living",
     dest: "Contemporary Homes",
-    img: "https://picsum.photos/seed/pkg2/800/500",
+    img: "/images/project-2.jpg",
     duration: "10-14 Months",
     price: "$480K+",
     includes: ["Open-concept floor plans", "Floor-to-ceiling windows", "Smart home integration", "Rooftop terrace option", "Sustainable materials"],

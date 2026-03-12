@@ -30,9 +30,12 @@ const Navbar = () => {
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-warm-gradient shadow-md">
             <Hammer className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className="text-foreground">
-            Summit <span className="font-light text-accent">Builders</span>
-          </span>
+          <div className="flex flex-col">
+            <span className="text-foreground leading-tight">
+              Summit <span className="font-light text-accent">Builders</span>
+            </span>
+            <span className="text-[10px] font-medium tracking-wider text-muted-foreground uppercase">Features Demo Website</span>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-1 xl:flex">

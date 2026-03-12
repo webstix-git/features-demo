@@ -1,21 +1,18 @@
 
-# Horizon Travels — Premium Travel Company Website
 
-A realistic travel company website with all 7 demo features seamlessly integrated. A "Demo Mode" toggle in the navbar reveals floating sales-rep tips for each feature.
+# Updated Plan: Simple Option Labels
 
-## Company: Horizon Travels
-- Tagline: "Your Journey, Our Passion"
-- Logo: Compass icon + "Horizon Travels"
-- Color: Indigo primary on white/slate base
+The only change from the approved plan is the naming convention for the A/B layout toggles. Instead of descriptive layout names (which sound too technical for clients), each toggle will use a clean code-style label:
 
-## Pages
-- `/` — Homepage (gallery, testimonials marquee, blog preview, newsletter, stats)
-- `/destinations` — Photo gallery (masonry + carousel)
-- `/packages` — Travel packages + past trip gallery
-- `/testimonials` — Marquee + star-rating grid
-- `/blog` — Card grid with category filters
-- `/faqs` — Category sidebar + accordion
-- `/contact` — Contact form + company info
+| Page | Toggle Labels |
+|------|---------------|
+| **Gallery** | Gallery Option A / Gallery Option B |
+| **Portfolio** | Portfolio Option A / Portfolio Option B |
+| **Case Studies** | Case Study Option A / Case Study Option B |
+| **Blog** | Blog Option A / Blog Option B |
+| **FAQs** | FAQ Option A / FAQ Option B |
 
-## Demo Mode
-- Toggle in navbar enables floating `SalesRepBubble` on each page with sales tips
+The underlying layouts remain the same (e.g., Gallery Option A is still masonry, Option B is still carousel) — only the user-facing label text changes. The descriptive details about what each layout does will live in the **Feature Guide sidebar** instead, where the sales rep can read about the differences.
+
+Everything else from the previous plan remains unchanged — branding, colors, FeatureGuide component, page structure, favicon, meta tags, etc.
+

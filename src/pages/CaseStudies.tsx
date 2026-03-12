@@ -31,8 +31,8 @@ const caseStudies = [
   {
     title: "Greenfield Net-Zero Home",
     client: "Patel Family",
-    before: "https://picsum.photos/seed/csbefore3/800/500",
-    after: "https://picsum.photos/seed/csafter3/800/500",
+    before: "/images/before-3.jpg",
+    after: "/images/after-3.jpg",
     challenge: "The clients wanted a fully net-zero energy home without sacrificing aesthetics or comfort.",
     solution: "We used passive house principles, installed a 12kW solar array, geothermal heating, and triple-pane windows. Every material was sourced for thermal performance.",
     result: "The home produces more energy than it consumes. Utility bills average $12/month. Won the regional Green Building Award.",

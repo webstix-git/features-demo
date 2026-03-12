@@ -7,8 +7,8 @@ const caseStudies = [
   {
     title: "The Oakwood Estate",
     client: "Mitchell Family",
-    before: "https://picsum.photos/seed/csbefore1/800/500",
-    after: "https://picsum.photos/seed/csafter1/800/500",
+    before: "/images/before-1.jpg",
+    after: "/images/after-1.jpg",
     challenge: "The family needed a 4-bedroom home on a sloping lot with limited road access and strict zoning requirements.",
     solution: "We designed a split-level layout that worked with the terrain, used retaining walls creatively, and navigated the zoning process end-to-end.",
     result: "Completed 2 weeks ahead of schedule. The home appraised at 15% above build cost. The family moved in before school started.",

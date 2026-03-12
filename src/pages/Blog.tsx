@@ -3,12 +3,12 @@ import { Clock, User } from "lucide-react";
 import FeatureGuide from "@/components/FeatureGuide";
 
 const posts = [
-  { title: "5 Trends in Custom Home Design for 2026", img: "https://picsum.photos/seed/blog1b/800/500", cat: "Design", date: "Mar 5, 2026", readTime: "6 min", author: "Sarah Mitchell", excerpt: "From biophilic design to multi-generational floor plans, these trends are shaping the future of home building." },
-  { title: "How to Choose the Right Contractor", img: "https://picsum.photos/seed/blog2b/800/500", cat: "Tips", date: "Feb 28, 2026", readTime: "4 min", author: "James Patterson", excerpt: "Red flags, green flags, and the questions you should ask before signing any contract." },
-  { title: "Kitchen Remodel: What to Expect", img: "https://picsum.photos/seed/blog3b/800/500", cat: "Renovation", date: "Feb 20, 2026", readTime: "8 min", author: "Karen O'Brien", excerpt: "A realistic timeline and budget guide for your kitchen renovation project." },
-  { title: "The Complete Guide to Building Permits", img: "https://picsum.photos/seed/blog4b/800/500", cat: "Tips", date: "Feb 12, 2026", readTime: "7 min", author: "David Chen", excerpt: "Everything you need to know about permits, inspections, and code compliance." },
-  { title: "Sustainable Building Materials Worth the Investment", img: "https://picsum.photos/seed/blog5b/800/500", cat: "Sustainability", date: "Jan 30, 2026", readTime: "5 min", author: "Sarah Mitchell", excerpt: "Eco-friendly materials that save money long-term and reduce your carbon footprint." },
-  { title: "Smart Home Features Every New Build Should Have", img: "https://picsum.photos/seed/blog6b/800/500", cat: "Design", date: "Jan 18, 2026", readTime: "9 min", author: "James Patterson", excerpt: "From automated lighting to integrated security — the must-have smart features." },
+  { title: "5 Trends in Custom Home Design for 2026", img: "/images/blog-1.jpg", cat: "Design", date: "Mar 5, 2026", readTime: "6 min", author: "Sarah Mitchell", excerpt: "From biophilic design to multi-generational floor plans, these trends are shaping the future of home building." },
+  { title: "How to Choose the Right Contractor", img: "/images/blog-2.jpg", cat: "Tips", date: "Feb 28, 2026", readTime: "4 min", author: "James Patterson", excerpt: "Red flags, green flags, and the questions you should ask before signing any contract." },
+  { title: "Kitchen Remodel: What to Expect", img: "/images/blog-3.jpg", cat: "Renovation", date: "Feb 20, 2026", readTime: "8 min", author: "Karen O'Brien", excerpt: "A realistic timeline and budget guide for your kitchen renovation project." },
+  { title: "The Complete Guide to Building Permits", img: "/images/blog-4.jpg", cat: "Tips", date: "Feb 12, 2026", readTime: "7 min", author: "David Chen", excerpt: "Everything you need to know about permits, inspections, and code compliance." },
+  { title: "Sustainable Building Materials Worth the Investment", img: "/images/blog-5.jpg", cat: "Sustainability", date: "Jan 30, 2026", readTime: "5 min", author: "Sarah Mitchell", excerpt: "Eco-friendly materials that save money long-term and reduce your carbon footprint." },
+  { title: "Smart Home Features Every New Build Should Have", img: "/images/blog-6.jpg", cat: "Design", date: "Jan 18, 2026", readTime: "9 min", author: "James Patterson", excerpt: "From automated lighting to integrated security — the must-have smart features." },
 ];
 
 const cats = ["All", "Design", "Tips", "Renovation", "Sustainability"];

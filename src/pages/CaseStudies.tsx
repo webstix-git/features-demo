@@ -19,8 +19,8 @@ const caseStudies = [
   {
     title: "Lincoln Park Brownstone",
     client: "Chen & Torres",
-    before: "https://picsum.photos/seed/csbefore2/800/500",
-    after: "https://picsum.photos/seed/csafter2/800/500",
+    before: "/images/before-2.jpg",
+    after: "/images/after-2.jpg",
     challenge: "A 100-year-old brownstone needed a full gut renovation while preserving the historic facade per city regulations.",
     solution: "We carefully deconstructed the interior, reinforced the structure with modern steel framing, and installed contemporary systems behind the original brickwork.",
     result: "Featured in Architectural Digest's 'Best Renovations' list. Property value increased by 40% post-renovation.",

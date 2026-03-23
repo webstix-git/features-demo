@@ -39,7 +39,7 @@ const FeatureGuide = ({ features }: FeatureGuideProps) => {
 
           <div className="space-y-6">
             {features.map((f, i) => (
-              <div key={i} className="rounded-xl border border-border bg-background p-4">
+              <div key={i} className="rounded-xl border border-border bg-white p-4">
                 <h4 className="mb-2 text-sm font-bold text-foreground">{f.module}</h4>
                 <p className="mb-3 text-xs text-muted-foreground leading-relaxed">{f.description}</p>
                 <div className="space-y-1.5">

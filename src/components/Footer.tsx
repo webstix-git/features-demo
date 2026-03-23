@@ -75,9 +75,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-primary-foreground/10 pt-6 flex flex-col items-center gap-2 text-xs text-primary-foreground/40">
-          <Link to="/sitemap" className="hover:text-accent transition-colors">Sitemap</Link>
-          <span>© 2026 Summit Builders Co. All rights reserved. This is a demo website.</span>
+        <div className="mt-12 border-t border-primary-foreground/10 pt-6 text-center text-xs text-primary-foreground/40">
+          © 2026 Summit Builders Co. All rights reserved. This is a demo website. | <Link to="/sitemap" className="hover:text-accent transition-colors">Site Map</Link>
         </div>
       </div>
     </footer>

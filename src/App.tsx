@@ -11,6 +11,7 @@ import PhotoGallery from "./pages/PhotoGallery";
 import Testimonials from "./pages/Testimonials";
 import FAQs from "./pages/FAQs";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Portfolio from "./pages/Portfolio";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";

@@ -1,17 +1,8 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Clock, User } from "lucide-react";
 import FeatureGuide from "@/components/FeatureGuide";
-
-const posts = [
-  { title: "5 Trends in Custom Home Design for 2026", img: "/images/blog-1.jpg", cat: "Design", date: "Mar 5, 2026", readTime: "6 min", author: "Sarah Mitchell", excerpt: "From biophilic design to multi-generational floor plans, these trends are shaping the future of home building." },
-  { title: "How to Choose the Right Contractor", img: "/images/blog-2.jpg", cat: "Tips", date: "Feb 28, 2026", readTime: "4 min", author: "James Patterson", excerpt: "Red flags, green flags, and the questions you should ask before signing any contract." },
-  { title: "Kitchen Remodel: What to Expect", img: "/images/blog-3.jpg", cat: "Renovation", date: "Feb 20, 2026", readTime: "8 min", author: "Karen O'Brien", excerpt: "A realistic timeline and budget guide for your kitchen renovation project." },
-  { title: "The Complete Guide to Building Permits", img: "/images/blog-4.jpg", cat: "Tips", date: "Feb 12, 2026", readTime: "7 min", author: "David Chen", excerpt: "Everything you need to know about permits, inspections, and code compliance." },
-  { title: "Sustainable Building Materials Worth the Investment", img: "/images/blog-5.jpg", cat: "Sustainability", date: "Jan 30, 2026", readTime: "5 min", author: "Sarah Mitchell", excerpt: "Eco-friendly materials that save money long-term and reduce your carbon footprint." },
-  { title: "Smart Home Features Every New Build Should Have", img: "/images/blog-6.jpg", cat: "Design", date: "Jan 18, 2026", readTime: "9 min", author: "James Patterson", excerpt: "From automated lighting to integrated security — the must-have smart features." },
-];
-
-const cats = ["All", "Design", "Tips", "Renovation", "Sustainability"];
+import { posts, cats } from "@/data/blogPosts";
 
 const features = [
   { module: "Blog Option A — Card Grid", description: "Card-based grid layout with category filter pills. Each card shows image, category tag, title, excerpt, and metadata.", reasons: ["Card grids are scannable and mobile-friendly", "Category filters help visitors self-segment", "Visual thumbnails increase click-through rates by 40%", "Author and read-time metadata builds content credibility"] },
@@ -75,7 +66,7 @@ const Blog = () => {
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {filtered.map((p) => (
-                <article key={p.title} className="group overflow-hidden rounded-2xl bg-card shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
+                <Link key={p.slug} to={`/blog/${p.slug}`} className="group overflow-hidden rounded-2xl bg-card shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
                   <div className="overflow-hidden">
                     <img src={p.img} alt={p.title} className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
                   </div>
@@ -89,7 +80,7 @@ const Blog = () => {
                       <span>{p.date}</span>
                     </div>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           </div>
@@ -99,13 +90,13 @@ const Blog = () => {
         <section className="py-14">
           <div className="container mx-auto px-4">
             {/* Featured Post */}
-            <div className="mb-12 overflow-hidden rounded-3xl bg-card shadow-lg md:flex">
+            <Link to={`/blog/${posts[0].slug}`} className="mb-12 overflow-hidden rounded-3xl bg-card shadow-lg md:flex group">
               <div className="md:w-1/2 overflow-hidden">
-                <img src={posts[0].img} alt={posts[0].title} className="h-full w-full object-cover" loading="lazy" />
+                <img src={posts[0].img} alt={posts[0].title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
               </div>
               <div className="flex flex-col justify-center p-8 md:p-10 md:w-1/2">
                 <span className="mb-2 inline-block w-fit rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">Featured</span>
-                <h2 className="mb-3 text-3xl font-bold text-foreground">{posts[0].title}</h2>
+                <h2 className="mb-3 text-3xl font-bold text-foreground group-hover:text-accent transition-colors">{posts[0].title}</h2>
                 <p className="mb-4 text-muted-foreground">{posts[0].excerpt}</p>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <span>{posts[0].author}</span>
@@ -113,12 +104,12 @@ const Blog = () => {
                   <span>{posts[0].readTime} read</span>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* List */}
             <div className="space-y-6">
               {posts.slice(1).map((p) => (
-                <article key={p.title} className="group flex flex-col gap-5 rounded-2xl bg-card p-5 shadow-md transition-all hover:shadow-xl md:flex-row md:items-center">
+                <Link key={p.slug} to={`/blog/${p.slug}`} className="group flex flex-col gap-5 rounded-2xl bg-card p-5 shadow-md transition-all hover:shadow-xl md:flex-row md:items-center">
                   <div className="md:w-48 shrink-0 overflow-hidden rounded-xl">
                     <img src={p.img} alt={p.title} className="aspect-video w-full object-cover md:aspect-square transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                   </div>
@@ -132,7 +123,7 @@ const Blog = () => {
                       <span>{p.readTime} read</span>
                     </div>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           </div>

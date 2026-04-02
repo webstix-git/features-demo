@@ -330,7 +330,7 @@ const LocalSEOPlans = () => {
 
             {/* Professional */}
             <div className="rounded-2xl border border-border bg-card p-8 flex flex-col">
-              <h3 className="text-2xl font-bold text-foreground">Professional</h3>
+              <h3 className="text-2xl font-bold text-foreground flex items-center gap-2"><Crown className="h-6 w-6 text-accent" />Professional</h3>
               <p className="mt-1 text-sm text-muted-foreground">
                 Builds authority and outperforms competitors.
               </p>

@@ -94,10 +94,16 @@ const LocalSEOPlans = () => {
             Discovery happens in many places such as radio, social media, word of mouth, and more,
             but people often make their final decision in Google.
           </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Google's search engine holds 90% market share and 95% on mobile worldwide. The average
-            user conducts 3 to 4 searches per day, with Gen Z exceeding 5 searches daily.
-          </p>
+          <ul className="space-y-2 text-muted-foreground pl-4">
+            <li className="flex items-start gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+              Google's search engine holds 90% market share and 95% on mobile worldwide.
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+              The average user conducts 3 to 4 searches per day, with Gen Z exceeding 5 searches daily.
+            </li>
+          </ul>
         </section>
 
         {/* Not Visible */}

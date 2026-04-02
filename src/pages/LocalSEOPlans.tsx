@@ -306,7 +306,7 @@ const LocalSEOPlans = () => {
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-warm-gradient px-4 py-1 text-xs font-semibold text-primary-foreground">
                 Popular
               </span>
-              <h3 className="text-2xl font-bold text-foreground">Advanced</h3>
+              <h3 className="text-2xl font-bold text-foreground flex items-center gap-2"><Rocket className="h-6 w-6 text-accent" />Advanced</h3>
               <p className="mt-1 text-sm text-muted-foreground">
                 Improves visibility and engagement.
               </p>

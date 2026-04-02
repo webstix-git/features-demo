@@ -89,7 +89,7 @@ const LocalSEOPlans = () => {
       <div className="container mx-auto px-4 py-16 space-y-16">
         {/* How People Choose */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">How People Choose a Local Business</h2>
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3"><Users className="h-8 w-8 text-accent shrink-0" /> How People Choose a Local Business</h2>
           <p className="text-muted-foreground leading-relaxed">
             Discovery happens in many places such as radio, social media, word of mouth, and more,
             but people often make their final decision in Google.

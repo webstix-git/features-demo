@@ -123,8 +123,8 @@ const LocalSEOPlans = () => {
 
         {/* Map Pack */}
         <section className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl font-bold text-foreground">
-            The Map Pack: You Can Pay for Visibility or Earn It
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <Map className="h-8 w-8 text-accent shrink-0" /> The Map Pack: You Can Pay for Visibility or Earn It
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6">

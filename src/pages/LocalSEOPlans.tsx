@@ -223,8 +223,8 @@ const LocalSEOPlans = () => {
 
         {/* Signals */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            We Build the Signals Google and AI Trust
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <Signal className="h-8 w-8 text-accent shrink-0" /> We Build the Signals Google and AI Trust
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             We focus on the signals that help your business earn trust and visibility:

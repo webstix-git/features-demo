@@ -412,12 +412,12 @@ const LocalSEOPlans = () => {
           </h2>
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              { name: "Basic", monthly: "$250", annual: "$3,000" },
-              { name: "Advanced", monthly: "$450", annual: "$5,400" },
-              { name: "Professional", monthly: "$750", annual: "$9,000" },
+              { name: "Basic", monthly: "$250", annual: "$3,000", icon: <Compass className="h-5 w-5 text-accent" /> },
+              { name: "Advanced", monthly: "$450", annual: "$5,400", icon: <Rocket className="h-5 w-5 text-accent" /> },
+              { name: "Professional", monthly: "$750", annual: "$9,000", icon: <Crown className="h-5 w-5 text-accent" /> },
             ].map((plan) => (
               <div key={plan.name} className="rounded-2xl border border-border bg-card p-6 text-center">
-                <h3 className="text-lg font-bold text-foreground">{plan.name}</h3>
+                <h3 className="text-lg font-bold text-foreground flex items-center justify-center gap-2">{plan.icon}{plan.name}</h3>
                 <p className="mt-2 text-2xl font-bold text-foreground">{plan.monthly}<span className="text-sm font-normal text-muted-foreground">/mo</span></p>
                 <p className="text-sm text-muted-foreground">{plan.annual}/year</p>
               </div>

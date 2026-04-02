@@ -170,8 +170,8 @@ const LocalSEOPlans = () => {
 
         {/* Consistency */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            Consistency Builds Trust and Authority
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <ShieldCheck className="h-8 w-8 text-accent shrink-0" /> Consistency Builds Trust and Authority
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Your business information needs to match across your website and listings. That includes your:

@@ -269,7 +269,11 @@ const LocalSEOPlans = () => {
         <section className="space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-foreground">Local SEO Plans</h2>
-            <p className="mt-2 text-muted-foreground">Choose the plan that fits your goals</p>
+            <p className="mt-2 text-lg text-muted-foreground">Choose the plan that fits your goals</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              We help your business stand out in local search by increasing visibility, building trust,
+              and driving more customer action from Google.
+            </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">

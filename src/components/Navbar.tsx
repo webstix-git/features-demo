@@ -10,8 +10,8 @@ const navLinks = [
   { name: "Blog", path: "/blog" },
   { name: "Testimonials", path: "/testimonials" },
   { name: "FAQs", path: "/faqs" },
+  { name: "Local SEO", path: "/local-seo-plans" },
   { name: "Contact", path: "/contact" },
-  { name: "Local SEO Plans", path: "/local-seo-plans" },
 ];
 
 const Navbar = () => {

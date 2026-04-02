@@ -407,8 +407,8 @@ const LocalSEOPlans = () => {
 
         {/* Investment Summary */}
         <section className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl font-bold text-foreground text-center">
-            Local SEO Investment Summary
+          <h2 className="text-3xl font-bold text-foreground text-center flex items-center justify-center gap-3">
+            <DollarSign className="h-8 w-8 text-accent shrink-0" /> Local SEO Investment Summary
           </h2>
           <div className="grid gap-4 md:grid-cols-3">
             {[

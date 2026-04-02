@@ -209,8 +209,8 @@ const LocalSEOPlans = () => {
 
         {/* Reviews */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            Businesses With More and Better Reviews Get More Clicks, Even if They're Not #1
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <Star className="h-8 w-8 text-accent shrink-0" /> Businesses With More and Better Reviews Get More Clicks, Even if They're Not #1
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Reviews are one of the strongest trust signals in local search.

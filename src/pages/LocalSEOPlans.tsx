@@ -213,9 +213,11 @@ const LocalSEOPlans = () => {
             Businesses With More and Better Reviews Get More Clicks, Even if They're Not #1
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Reviews are one of the strongest trust signals in local search. They help customers feel
-            confident choosing your business, and they can influence clicks even when another
-            business ranks above you.
+            Reviews are one of the strongest trust signals in local search.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            They help customers feel confident choosing your business, and they can influence clicks
+            even when another business ranks above you.
           </p>
         </section>
 

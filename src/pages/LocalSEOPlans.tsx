@@ -279,7 +279,7 @@ const LocalSEOPlans = () => {
           <div className="grid gap-8 md:grid-cols-3">
             {/* Basic */}
             <div className="rounded-2xl border border-border bg-card p-8 flex flex-col">
-              <h3 className="text-2xl font-bold text-foreground">Basic</h3>
+              <h3 className="text-2xl font-bold text-foreground flex items-center gap-2"><Compass className="h-6 w-6 text-accent" />Basic</h3>
               <p className="mt-1 text-sm text-muted-foreground">
                 Establishes your presence and accuracy.
               </p>

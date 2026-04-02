@@ -174,9 +174,16 @@ const LocalSEOPlans = () => {
             Consistency Builds Trust and Authority
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Your business information needs to match across your website and listings. That includes
-            your business name, address, phone number, website, and description.
+            Your business information needs to match across your website and listings. That includes your:
           </p>
+          <ul className="space-y-2 text-muted-foreground pl-4">
+            {["Business name", "Address", "Phone number", "Website", "Description"].map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                {item}
+              </li>
+            ))}
+          </ul>
           <div className="rounded-2xl border border-border bg-card p-6 space-y-3">
             <h3 className="text-lg font-bold text-foreground">What Matters</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">

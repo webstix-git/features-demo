@@ -16,6 +16,7 @@ import Portfolio from "./pages/Portfolio";
 import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import Tips from "./pages/Tips";
+import LocalSEOPlans from "./pages/LocalSEOPlans";
 import Sitemap from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 

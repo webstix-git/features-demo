@@ -108,8 +108,8 @@ const LocalSEOPlans = () => {
 
         {/* Not Visible */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            If You're Not Visible in Google, You're Not an Option
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <EyeOff className="h-8 w-8 text-accent shrink-0" /> If You're Not Visible in Google, You're Not an Option
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Customers search for businesses like yours every day from relevant, location-based

@@ -154,7 +154,7 @@ const LocalSEOPlans = () => {
 
         {/* AI Trusts */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">AI Recommends Businesses It Trusts</h2>
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3"><Bot className="h-8 w-8 text-accent shrink-0" /> AI Recommends Businesses It Trusts</h2>
           <p className="text-muted-foreground leading-relaxed">
             AI recommends businesses it trusts. It builds that trust from:
           </p>

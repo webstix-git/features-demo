@@ -361,7 +361,7 @@ const LocalSEOPlans = () => {
 
         {/* Appendix */}
         <section className="max-w-3xl mx-auto space-y-8">
-          <h2 className="text-3xl font-bold text-foreground">Appendix</h2>
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3"><BookOpen className="h-8 w-8 text-accent shrink-0" /> Appendix</h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6">

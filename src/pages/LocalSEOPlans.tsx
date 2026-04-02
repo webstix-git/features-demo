@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Check } from "lucide-react";
+import { Check, Compass, Rocket, Crown } from "lucide-react";
 import FeatureGuide from "@/components/FeatureGuide";
 
 const features = [

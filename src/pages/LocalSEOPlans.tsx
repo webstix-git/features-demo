@@ -213,9 +213,11 @@ const LocalSEOPlans = () => {
             Businesses With More and Better Reviews Get More Clicks, Even if They're Not #1
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Reviews are one of the strongest trust signals in local search. They help customers feel
-            confident choosing your business, and they can influence clicks even when another
-            business ranks above you.
+            Reviews are one of the strongest trust signals in local search.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            They help customers feel confident choosing your business, and they can influence clicks
+            even when another business ranks above you.
           </p>
         </section>
 
@@ -249,12 +251,17 @@ const LocalSEOPlans = () => {
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             We can create a QR code with a direct Google Business Profile link so you can send it to
-            customers. We also monitor your reviews so you know when someone leaves feedback.
+            customers.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Advanced and Professional plans include review responses. We can also send an email to
-            your customer list, provided by you, to help generate Google reviews. This is included
-            once per quarter for Advanced and Professional plans.
+            We also monitor your reviews so you know when someone leaves feedback.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Advanced and Professional plans include review responses.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We can also send an email to your customer list, provided by you, to help generate
+            Google reviews. This is included once per quarter for Advanced and Professional plans.
           </p>
         </section>
 
@@ -262,7 +269,11 @@ const LocalSEOPlans = () => {
         <section className="space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-foreground">Local SEO Plans</h2>
-            <p className="mt-2 text-muted-foreground">Choose the plan that fits your goals</p>
+            <p className="mt-2 text-lg text-muted-foreground">Choose the plan that fits your goals</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              We help your business stand out in local search by increasing visibility, building trust,
+              and driving more customer action from Google.
+            </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3">

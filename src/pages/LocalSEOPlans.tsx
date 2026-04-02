@@ -246,8 +246,8 @@ const LocalSEOPlans = () => {
 
         {/* QR / Reviews */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            We Make It Easier for Your Customers to Leave Reviews
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <QrCode className="h-8 w-8 text-accent shrink-0" /> We Make It Easier for Your Customers to Leave Reviews
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             We can create a QR code with a direct Google Business Profile link so you can send it to

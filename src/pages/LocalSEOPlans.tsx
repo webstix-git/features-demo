@@ -251,12 +251,17 @@ const LocalSEOPlans = () => {
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             We can create a QR code with a direct Google Business Profile link so you can send it to
-            customers. We also monitor your reviews so you know when someone leaves feedback.
+            customers.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Advanced and Professional plans include review responses. We can also send an email to
-            your customer list, provided by you, to help generate Google reviews. This is included
-            once per quarter for Advanced and Professional plans.
+            We also monitor your reviews so you know when someone leaves feedback.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Advanced and Professional plans include review responses.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            We can also send an email to your customer list, provided by you, to help generate
+            Google reviews. This is included once per quarter for Advanced and Professional plans.
           </p>
         </section>
 

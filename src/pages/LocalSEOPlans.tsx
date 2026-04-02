@@ -268,7 +268,7 @@ const LocalSEOPlans = () => {
         {/* Pricing Plans */}
         <section className="space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-foreground">Local SEO Plans</h2>
+            <h2 className="text-3xl font-bold text-foreground flex items-center justify-center gap-3"><CreditCard className="h-8 w-8 text-accent shrink-0" /> Local SEO Plans</h2>
             <p className="mt-2 text-lg text-muted-foreground">Choose the plan that fits your goals</p>
             <p className="mt-1 text-sm text-muted-foreground">
               We help your business stand out in local search by increasing visibility, building trust,

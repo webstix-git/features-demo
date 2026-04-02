@@ -11,6 +11,7 @@ const pages = [
   { name: "FAQs", path: "/faqs" },
   { name: "Contact", path: "/contact" },
   { name: "Sales Tips", path: "/tips" },
+  { name: "Local SEO Plans", path: "/local-seo-plans" },
 ];
 
 const Sitemap = () => {

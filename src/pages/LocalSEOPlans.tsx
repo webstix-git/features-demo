@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Check } from "lucide-react";
+import { Check, Users, EyeOff, Map, Bot, ShieldCheck, Star, Signal, QrCode, CreditCard, BookOpen, DollarSign } from "lucide-react";
 import FeatureGuide from "@/components/FeatureGuide";
 
 const features = [

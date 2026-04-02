@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Check } from "lucide-react";
+import { Check, Users, EyeOff, Map, Bot, ShieldCheck, Star, Signal, QrCode, CreditCard, BookOpen, DollarSign } from "lucide-react";
 import FeatureGuide from "@/components/FeatureGuide";
 
 const features = [
@@ -89,7 +89,7 @@ const LocalSEOPlans = () => {
       <div className="container mx-auto px-4 py-16 space-y-16">
         {/* How People Choose */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">How People Choose a Local Business</h2>
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3"><Users className="h-8 w-8 text-accent shrink-0" /> How People Choose a Local Business</h2>
           <p className="text-muted-foreground leading-relaxed">
             Discovery happens in many places such as radio, social media, word of mouth, and more,
             but people often make their final decision in Google.
@@ -108,8 +108,8 @@ const LocalSEOPlans = () => {
 
         {/* Not Visible */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            If You're Not Visible in Google, You're Not an Option
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <EyeOff className="h-8 w-8 text-accent shrink-0" /> If You're Not Visible in Google, You're Not an Option
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Customers search for businesses like yours every day from relevant, location-based
@@ -123,8 +123,8 @@ const LocalSEOPlans = () => {
 
         {/* Map Pack */}
         <section className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl font-bold text-foreground">
-            The Map Pack: You Can Pay for Visibility or Earn It
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <Map className="h-8 w-8 text-accent shrink-0" /> The Map Pack: You Can Pay for Visibility or Earn It
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6">
@@ -154,7 +154,7 @@ const LocalSEOPlans = () => {
 
         {/* AI Trusts */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">AI Recommends Businesses It Trusts</h2>
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3"><Bot className="h-8 w-8 text-accent shrink-0" /> AI Recommends Businesses It Trusts</h2>
           <p className="text-muted-foreground leading-relaxed">
             AI recommends businesses it trusts. It builds that trust from:
           </p>
@@ -170,8 +170,8 @@ const LocalSEOPlans = () => {
 
         {/* Consistency */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            Consistency Builds Trust and Authority
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <ShieldCheck className="h-8 w-8 text-accent shrink-0" /> Consistency Builds Trust and Authority
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Your business information needs to match across your website and listings. That includes your:
@@ -209,8 +209,8 @@ const LocalSEOPlans = () => {
 
         {/* Reviews */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            Businesses With More and Better Reviews Get More Clicks, Even if They're Not #1
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <Star className="h-8 w-8 text-accent shrink-0" /> Businesses With More and Better Reviews Get More Clicks, Even if They're Not #1
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Reviews are one of the strongest trust signals in local search.
@@ -223,8 +223,8 @@ const LocalSEOPlans = () => {
 
         {/* Signals */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            We Build the Signals Google and AI Trust
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <Signal className="h-8 w-8 text-accent shrink-0" /> We Build the Signals Google and AI Trust
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             We focus on the signals that help your business earn trust and visibility:
@@ -246,8 +246,8 @@ const LocalSEOPlans = () => {
 
         {/* QR / Reviews */}
         <section className="max-w-3xl mx-auto space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            We Make It Easier for Your Customers to Leave Reviews
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <QrCode className="h-8 w-8 text-accent shrink-0" /> We Make It Easier for Your Customers to Leave Reviews
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             We can create a QR code with a direct Google Business Profile link so you can send it to
@@ -268,7 +268,7 @@ const LocalSEOPlans = () => {
         {/* Pricing Plans */}
         <section className="space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-foreground">Local SEO Plans</h2>
+            <h2 className="text-3xl font-bold text-foreground flex items-center justify-center gap-3"><CreditCard className="h-8 w-8 text-accent shrink-0" /> Local SEO Plans</h2>
             <p className="mt-2 text-lg text-muted-foreground">Choose the plan that fits your goals</p>
             <p className="mt-1 text-sm text-muted-foreground">
               We help your business stand out in local search by increasing visibility, building trust,
@@ -361,7 +361,7 @@ const LocalSEOPlans = () => {
 
         {/* Appendix */}
         <section className="max-w-3xl mx-auto space-y-8">
-          <h2 className="text-3xl font-bold text-foreground">Appendix</h2>
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3"><BookOpen className="h-8 w-8 text-accent shrink-0" /> Appendix</h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6">
@@ -407,8 +407,8 @@ const LocalSEOPlans = () => {
 
         {/* Investment Summary */}
         <section className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl font-bold text-foreground text-center">
-            Local SEO Investment Summary
+          <h2 className="text-3xl font-bold text-foreground text-center flex items-center justify-center gap-3">
+            <DollarSign className="h-8 w-8 text-accent shrink-0" /> Local SEO Investment Summary
           </h2>
           <div className="grid gap-4 md:grid-cols-3">
             {[

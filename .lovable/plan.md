@@ -1,31 +1,38 @@
 
 
-# Blog Detail Page
+# Create "Local SEO Plans" Page
+
+## Overview
+Create a new page at `/local-seo-plans` with content from the uploaded document, structured with proper heading hierarchy (H1, H2, H3). Add a nav link labeled "Local SEO Plans".
 
 ## Changes
 
-### 1. Add slug to posts data (`Blog.tsx`)
-Add a `slug` field to each post and a `content` field with full article body (multiple paragraphs of lorem-style construction content). Export the `posts` array so the detail page can import it.
+### 1. Create `src/pages/LocalSEOPlans.tsx`
+A content page structured into sections from the document:
 
-### 2. Wrap blog cards/list items with `<Link>` (`Blog.tsx`)
-Both Option A cards and Option B list items become clickable links to `/blog/:slug`.
+- **Hero/Banner**: "Winning Local Search" heading with a construction-themed banner image (consistent with other pages)
+- **Content sections** using the document's heading hierarchy:
+  - H1 → large section headings (e.g., "How People Choose a Local Business", "The Map Pack", "Consistency Builds Trust", etc.)
+  - H2 → sub-headings within sections
+  - H3 → minor headings
+- **Bullet lists** preserved as styled `<ul>` elements
+- **Pricing plans section**: Three-tier card layout (Basic $250/mo, Advanced $450/mo, Professional $750/mo) with feature lists
+- **Appendix section**: Listings and Citations definitions
+- **Investment Summary**: Final summary table/cards with monthly and annual pricing
+- Include `FeatureGuide` sidebar (consistent with other pages)
 
-### 3. Create `src/pages/BlogPost.tsx`
-Standard blog detail layout:
-- Hero banner image (full-width, from post data)
-- Category tag, title, author, date, read time
-- Article body with proper typography (prose styling)
-- Sidebar or inline "Related Posts" section at the bottom
-- Back to blog link
+### 2. Update `src/components/Navbar.tsx`
+Add `{ name: "Local SEO Plans", path: "/local-seo-plans" }` to the `navLinks` array.
 
-### 4. Add route in `App.tsx`
-```
-<Route path="/blog/:slug" element={<BlogPost />} />
-```
+### 3. Update `src/App.tsx`
+- Import `LocalSEOPlans` component
+- Add route: `<Route path="/local-seo-plans" element={<LocalSEOPlans />} />`
+
+### 4. Update `src/pages/Sitemap.tsx`
+Add Local SEO Plans entry to the sitemap links.
 
 ### Technical Details
-- Posts data will be moved to a shared `src/data/blogPosts.ts` file
-- Detail page uses `useParams()` to find the matching post by slug
-- 404 fallback if slug doesn't match
-- Content will be an array of paragraph strings rendered with `prose` typography classes
+- Page follows existing page patterns (banner, FeatureGuide, consistent styling)
+- Pricing plans rendered as a responsive card grid (similar to common pricing page layouts)
+- All text content taken directly from the document
 

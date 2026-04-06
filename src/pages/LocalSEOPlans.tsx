@@ -264,8 +264,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* QR / Reviews — Tan */}
-      <section style={{ backgroundColor: "#f8f1ec" }} className="py-20">
+      {/* QR / Reviews — White */}
+      <section style={{ backgroundColor: "#ffffff" }} className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl grid gap-10 md:grid-cols-2 items-center">
             <div className="rounded-2xl overflow-hidden shadow-lg order-2 md:order-1">
@@ -294,8 +294,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* Pricing Plans — White */}
-      <section style={{ backgroundColor: "#ffffff" }} className="py-20">
+      {/* Pricing Plans — Tan */}
+      <section style={{ backgroundColor: "#f8f1ec" }} className="py-20">
         <div className="container mx-auto px-4 space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-foreground">Local SEO Plans</h2>
@@ -376,8 +376,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* Appendix — Tan */}
-      <section style={{ backgroundColor: "#f8f1ec" }} className="py-20">
+      {/* Appendix — White */}
+      <section style={{ backgroundColor: "#ffffff" }} className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl space-y-8">
             <h2 className="text-3xl font-bold text-foreground">Appendix</h2>
@@ -411,8 +411,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* Investment Summary — White */}
-      <section style={{ backgroundColor: "#ffffff" }} className="py-20">
+      {/* Investment Summary — Gray */}
+      <section style={{ backgroundColor: "#f4f2f1" }} className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl space-y-6">
             <h2 className="text-3xl font-bold text-foreground text-center">

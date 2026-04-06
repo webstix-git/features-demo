@@ -169,8 +169,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* AI Trusts — Tan */}
-      <section style={{ backgroundColor: "#f8f1ec" }} className="py-20">
+      {/* AI Trusts — White */}
+      <section style={{ backgroundColor: "#ffffff" }} className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl space-y-4">
             <h2 className="text-3xl font-bold text-foreground">AI Recommends Businesses It Trusts</h2>
@@ -186,8 +186,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* Consistency — White */}
-      <section style={{ backgroundColor: "#ffffff" }} className="py-20">
+      {/* Consistency — Tan */}
+      <section style={{ backgroundColor: "#f8f1ec" }} className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl space-y-4">
             <h2 className="text-3xl font-bold text-foreground">
@@ -217,8 +217,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* Reviews — Gray */}
-      <section style={{ backgroundColor: "#f4f2f1" }} className="py-20">
+      {/* Reviews — White */}
+      <section style={{ backgroundColor: "#ffffff" }} className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl grid gap-10 md:grid-cols-2 items-center">
             <div className="space-y-4">
@@ -240,8 +240,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* Signals — Tan */}
-      <section style={{ backgroundColor: "#f8f1ec" }} className="py-20">
+      {/* Signals — Gray */}
+      <section style={{ backgroundColor: "#f4f2f1" }} className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl space-y-4">
             <h2 className="text-3xl font-bold text-foreground">
@@ -294,8 +294,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* Pricing Plans — Gray */}
-      <section style={{ backgroundColor: "#f4f2f1" }} className="py-20">
+      {/* Pricing Plans — Tan */}
+      <section style={{ backgroundColor: "#f8f1ec" }} className="py-20">
         <div className="container mx-auto px-4 space-y-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-foreground">Local SEO Plans</h2>
@@ -376,8 +376,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* Appendix — Tan */}
-      <section style={{ backgroundColor: "#f8f1ec" }} className="py-20">
+      {/* Appendix — White */}
+      <section style={{ backgroundColor: "#ffffff" }} className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl space-y-8">
             <h2 className="text-3xl font-bold text-foreground">Appendix</h2>
@@ -411,8 +411,8 @@ const LocalSEOPlans = () => {
         </div>
       </section>
 
-      {/* Investment Summary — White */}
-      <section style={{ backgroundColor: "#ffffff" }} className="py-20">
+      {/* Investment Summary — Gray */}
+      <section style={{ backgroundColor: "#f4f2f1" }} className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-5xl space-y-6">
             <h2 className="text-3xl font-bold text-foreground text-center">

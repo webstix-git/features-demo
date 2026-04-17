@@ -17,6 +17,7 @@ import CaseStudies from "./pages/CaseStudies";
 import Contact from "./pages/Contact";
 import Tips from "./pages/Tips";
 import LocalSEOPlans from "./pages/LocalSEOPlans";
+import AIReadinessServiceIndex from "./pages/AIReadinessServiceIndex";
 import Sitemap from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/tips" element={<Tips />} />
           <Route path="/local-seo-plans" element={<LocalSEOPlans />} />
+          <Route path="/ai-readiness-service-index" element={<AIReadinessServiceIndex />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

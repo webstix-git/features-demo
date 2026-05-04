@@ -37,13 +37,14 @@ const basicFeatures = [
   "FAQs and menu or service buildout",
   "Reviews link and QR code",
   "Reporting and audits",
+  "1 Google Business Profile post monthly",
 ];
 
 const advancedFeatures = [
   "Everything in Basic, plus:",
   "Keyword tracking up to 15 words",
   "Review responses up to 5 per month",
-  "1 Google Business Profile post monthly",
+  "2 Google Business Profile posts monthly",
   "1 review generation email per quarter",
 ];
 
@@ -51,7 +52,7 @@ const professionalFeatures = [
   "Everything in Advanced, plus:",
   "Review responses up to 10 per month",
   "1–2 additional listings and citations",
-  "2 Google Business Profile posts monthly",
+  "3 Google Business Profile posts monthly",
 ];
 
 const listingExamples = [

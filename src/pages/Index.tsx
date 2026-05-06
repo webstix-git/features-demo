@@ -104,7 +104,7 @@ const Index = () => {
             {projects.map((d) => (
               <Link key={d.name} to="/packages" className="group overflow-hidden rounded-2xl bg-background shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
                 <div className="relative overflow-hidden">
-                  <img src={d.img} alt={d.name} className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                  <img src={d.img} alt={d.name} width={800} height={600} className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
                   <div className="absolute top-3 left-3">
                     <span className="rounded-full bg-card/90 px-3 py-1 text-xs font-semibold text-foreground backdrop-blur-sm">{d.tag}</span>
                   </div>
@@ -209,7 +209,7 @@ const Index = () => {
             {blogPosts.map((p) => (
               <Link key={p.title} to="/blog" className="group overflow-hidden rounded-2xl bg-background shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
                 <div className="overflow-hidden">
-                  <img src={p.img} alt={p.title} className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                  <img src={p.img} alt={p.title} width={800} height={512} className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
                 </div>
                 <div className="p-5">
                   <span className="mb-2 inline-block rounded-full bg-accent/10 px-3 py-0.5 text-xs font-semibold text-accent">{p.cat}</span>

@@ -104,7 +104,7 @@ const Index = () => {
             {projects.map((d) => (
               <Link key={d.name} to="/packages" className="group overflow-hidden rounded-2xl bg-background shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
                 <div className="relative overflow-hidden">
-                  <img src={d.img} alt={d.name} className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                  <img src={d.img} alt={d.name} width={800} height={600} className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
                   <div className="absolute top-3 left-3">
                     <span className="rounded-full bg-card/90 px-3 py-1 text-xs font-semibold text-foreground backdrop-blur-sm">{d.tag}</span>
                   </div>

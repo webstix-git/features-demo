@@ -57,7 +57,7 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        <button className="xl:hidden text-foreground" onClick={() => setMobileOpen((p) => !p)}>
+        <button aria-label="Toggle menu" aria-expanded={mobileOpen} className="xl:hidden text-foreground" onClick={() => setMobileOpen((p) => !p)}>
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>

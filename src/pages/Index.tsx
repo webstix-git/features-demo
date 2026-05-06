@@ -209,7 +209,7 @@ const Index = () => {
             {blogPosts.map((p) => (
               <Link key={p.title} to="/blog" className="group overflow-hidden rounded-2xl bg-background shadow-md transition-all hover:shadow-xl hover:-translate-y-1">
                 <div className="overflow-hidden">
-                  <img src={p.img} alt={p.title} className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                  <img src={p.img} alt={p.title} width={800} height={512} className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async" />
                 </div>
                 <div className="p-5">
                   <span className="mb-2 inline-block rounded-full bg-accent/10 px-3 py-0.5 text-xs font-semibold text-accent">{p.cat}</span>

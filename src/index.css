@@ -22,7 +22,7 @@
     --muted: 30 10% 82%;
     --muted-foreground: 160 15% 40%;
 
-    --accent: 20 55% 53%;
+    --accent: 20 65% 38%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -34,8 +34,8 @@
 
     --radius: 0.75rem;
 
-    --warm: 20 55% 53%;
-    --coral: 20 55% 53%;
+    --warm: 20 65% 38%;
+    --coral: 20 65% 38%;
     --teal: 160 30% 15%;
 
     --sidebar-background: 30 20% 96%;
@@ -112,10 +112,10 @@
   }
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(20 55% 53%), hsl(30 45% 60%));
+    background-image: linear-gradient(135deg, hsl(20 65% 38%), hsl(20 55% 48%));
   }
   .bg-warm-gradient {
-    background: linear-gradient(135deg, hsl(20 55% 53%), hsl(30 50% 58%));
+    background: linear-gradient(135deg, hsl(20 65% 38%), hsl(20 60% 46%));
   }
   .bg-teal-gradient {
     background: linear-gradient(135deg, hsl(160 30% 15%), hsl(160 35% 22%));

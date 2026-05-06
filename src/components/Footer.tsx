@@ -28,14 +28,14 @@ const Footer = () => {
             </Link>
             <p className="mb-4 text-sm text-primary-foreground/60">Building Dreams, One Home at a Time. Premium custom home construction and renovation services.</p>
             <div className="flex gap-3">
-              <a href="#" className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/60 hover:bg-accent/20 hover:text-accent transition-colors"><Facebook className="h-4 w-4" /></a>
-              <a href="#" className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/60 hover:bg-accent/20 hover:text-accent transition-colors"><Instagram className="h-4 w-4" /></a>
-              <a href="#" className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/60 hover:bg-accent/20 hover:text-accent transition-colors"><Twitter className="h-4 w-4" /></a>
+              <a href="#" aria-label="Facebook" className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/60 hover:bg-accent/20 hover:text-accent transition-colors"><Facebook className="h-4 w-4" /></a>
+              <a href="#" aria-label="Instagram" className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/60 hover:bg-accent/20 hover:text-accent transition-colors"><Instagram className="h-4 w-4" /></a>
+              <a href="#" aria-label="Twitter" className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-foreground/10 text-primary-foreground/60 hover:bg-accent/20 hover:text-accent transition-colors"><Twitter className="h-4 w-4" /></a>
             </div>
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-primary-foreground">Quick Links</h4>
+            <h3 className="mb-4 text-sm font-semibold text-primary-foreground">Quick Links</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/60">
               <li><Link to="/destinations" className="hover:text-accent transition-colors">Gallery</Link></li>
               <li><Link to="/packages" className="hover:text-accent transition-colors">Portfolio</Link></li>
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-primary-foreground">Contact Us</h4>
+            <h3 className="mb-4 text-sm font-semibold text-primary-foreground">Contact Us</h3>
             <ul className="space-y-3 text-sm text-primary-foreground/60">
               <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> 742 Evergreen Terrace, Springfield, IL 62704</li>
               <li className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0 text-accent" /> +1 (555) 867-5309</li>
@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-primary-foreground">Project Updates</h4>
+            <h3 className="mb-4 text-sm font-semibold text-primary-foreground">Project Updates</h3>
             <p className="mb-3 text-sm text-primary-foreground/60">Subscribe for home building tips and project showcases.</p>
             <form onSubmit={handleSubscribe} className="flex gap-2">
               <input

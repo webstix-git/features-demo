@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import { Accessibility, Check, ShieldCheck, Sparkles, X, Eye, Keyboard, Brain, Code2 } from "lucide-react";
 import adaHero from "@/assets/ada-hero.jpg";
 import adaPrinciples from "@/assets/ada-principles.jpg";

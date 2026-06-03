@@ -231,24 +231,6 @@ const ADACompliance = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="container mx-auto px-4 pb-24">
-        <div className="overflow-hidden rounded-3xl bg-warm-gradient p-10 text-center shadow-xl sm:p-14">
-          <h2 className="mb-4 text-3xl font-bold text-primary-foreground sm:text-4xl">
-            Not sure where your site stands?
-          </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-base text-primary-foreground/85">
-            We'll audit your current site against WCAG 2.2 AA and give you a prioritized fix list ,
-            no obligation, no jargon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 rounded-xl bg-background px-6 py-3 text-sm font-semibold text-foreground shadow-md transition-all hover:scale-105 hover:shadow-lg"
-          >
-            Request an Accessibility Audit
-          </Link>
-        </div>
-      </section>
     </div>
   );
 };

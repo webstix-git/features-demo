@@ -1,33 +1,79 @@
-## Accessibility Fixes — Target 95+ Score
+# ADA Compliance Page
 
-Address all four critical Lighthouse accessibility issues on the homepage.
+Create a new informational page explaining ADA/WCAG compliance, the three conformance levels, what's included in each, and clarify that the current package covers up to AA while AAA is a custom-scoped add-on. Page should look neat, professional, and visually polished with supporting imagery.
 
-### 1. Mobile menu button missing accessible name
-`src/components/Navbar.tsx` — add `aria-label="Toggle menu"` and `aria-expanded={mobileOpen}` to the hamburger button.
+## Page
 
-### 2. Footer social links lack discernible names
-`src/components/Footer.tsx` — add `aria-label="Facebook"`, `"Instagram"`, `"Twitter"` to the three social `<a>` tags. Also fix `href="#"` → real placeholder URLs (or keep `#` but the aria-label resolves the audit).
+- Route: `/ada-compliance`
+- File: `src/pages/ADACompliance.tsx` (lazy-loaded in `src/App.tsx`)
+- Document title + H1: "ADA Compliance"
 
-### 3. Insufficient color contrast
-Root cause: the accent orange (`hsl(20 55% 53%)`) is used for:
-- Small uppercase eyebrow labels on light/card backgrounds (text-accent on bg-background) — fails 4.5:1
-- White text on accent badges ("From $450K", "Spring Special", "Join" button, "Design"/"Tips"/"Renovation" pill labels) — `text-accent-foreground` (white) on accent orange fails 4.5:1
-- "View All Posts" link text-accent on bg-card
+## Sections
 
-Fix in `src/index.css` by darkening the accent so both white-on-accent and accent-on-light pass WCAG AA:
-- Change `--accent` from `20 55% 53%` to `20 65% 38%` (deeper terracotta). This raises contrast vs white to ~5.5:1 and vs light backgrounds to ~6:1.
-- Update `--warm` and `--coral` tokens and the `bg-warm-gradient` / `text-gradient` gradient stops to use the new darker accent + a slightly lighter complementary stop so hero CTAs remain warm.
-- For the small "Design/Tips/Renovation" pills using `bg-accent/10` + `text-accent`, the darker accent automatically passes.
+1. **Hero** — Full-width banner with a generated hero image (warm, inclusive workspace / accessibility-themed photo). Overlay with title, short intro about ADA (Americans with Disabilities Act) and WCAG 2.1/2.2 as the technical standard, and why it matters (legal risk, broader audience, SEO).
 
-No layout/visual identity change beyond a slightly richer, deeper terracotta — still on-brand with the existing earthy palette (per brand identity memory).
+2. **What is ADA Compliance?** — Two-column layout: text on one side covering the four POUR principles (Perceivable, Operable, Understandable, Robust); a supporting image on the other (e.g., person using assistive tech / keyboard navigation close-up).
 
-### 4. Heading order skip (h2 → h4 in Footer)
-`src/components/Footer.tsx` — change the four footer `<h4>` elements ("Quick Links", "Contact Us", "Project Updates") to `<h3>`, since the nearest preceding heading on most pages is an `<h2>`.
+3. **Conformance Levels** — Three side-by-side cards, each with a small illustrative icon header strip (lucide icons + subtle background image or pattern):
 
-### Verification
-After changes, expected Lighthouse Accessibility score ~96–100. No functional or layout regressions expected; only color tone shifts slightly darker on the accent.
+   - **Level A — Essential (Included)**
+     - Alt text on all images
+     - Keyboard navigation for all functionality
+     - Video captions (pre-recorded)
+     - No content flashing >3x/sec
+     - Page titles and language attribute
+     - Form inputs with labels
+     - Logical reading order
 
-### Files to edit
-- `src/components/Navbar.tsx`
-- `src/components/Footer.tsx`
-- `src/index.css`
+   - **Level AA — Standard (Included in current package)**
+     - Everything in Level A
+     - Color contrast 4.5:1 (text), 3:1 (large text/UI)
+     - Resizable text up to 200%
+     - Multiple ways to find pages
+     - Consistent navigation
+     - Visible focus indicators
+     - Error identification & suggestions on forms
+     - Descriptive headings and labels
+     - Audio descriptions for video
+     - Status messages announced to screen readers
+
+   - **Level AAA — Enhanced (Not included — custom scope)**
+     - Everything in AA
+     - Color contrast 7:1 (text), 4.5:1 (large text)
+     - Sign language interpretation for video
+     - Extended audio descriptions
+     - No timing/time limits
+     - Reading level no more advanced than lower secondary
+     - Context-sensitive help
+     - Pronunciation guides
+     - Re-authentication without data loss
+
+4. **Why AAA is custom** — Callout band with a supporting image (e.g., design-review / drafting scene). Explains AAA requires content rewrites, sign-language video production, contrast-driven redesigns, and ongoing editorial review — each case-by-case, quoted separately.
+
+5. **CTA** — "Request an Accessibility Audit" button linking to `/contact`.
+
+## Imagery
+
+Generate 3 locally-hosted images (per project memory — no external placeholders) into `src/assets/`:
+
+- `ada-hero.jpg` — wide, warm, inclusive workspace scene that conveys accessibility (~1600×900).
+- `ada-principles.jpg` — close-up of hands on keyboard / assistive tech (~1200×900).
+- `ada-custom.jpg` — designers reviewing wireframes/contrast swatches at a table (~1200×800).
+
+All images use `loading="lazy"`, explicit `width`/`height`, and meaningful `alt` text. Use the project's earthy palette aesthetic (warm tones) so they sit naturally with existing pages.
+
+## Wiring
+
+- Add lazy import + `<Route path="/ada-compliance" element={<ADACompliance />} />` in `src/App.tsx`.
+- Add "ADA Compliance" entry to the `pages` array in `src/pages/Sitemap.tsx`.
+
+## Style notes
+
+- Reuse existing semantic tokens (`bg-background`, `text-foreground`, `bg-warm-gradient`, `text-accent`, `border-border`, card patterns from `LocalSEOPlans`).
+- Three-tier cards: A and AA get an "Included" badge (`bg-accent text-accent-foreground`); AAA gets a muted "Custom Scope" badge with a distinct outlined treatment.
+- Lucide icons: `Accessibility`, `Check`, `ShieldCheck`, `Sparkles`, `X`.
+- Bespoke organic layout — no generic page template wrapper.
+
+## Out of scope
+
+- No navbar link (already 9 items). Reachable via Sitemap. Confirm if you'd also like it added to the footer Quick Links.

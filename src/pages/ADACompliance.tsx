@@ -127,10 +127,6 @@ const ADACompliance = () => {
               loading="lazy"
               className="rounded-3xl shadow-2xl"
             />
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-card p-5 shadow-xl sm:block">
-              <p className="text-2xl font-bold text-accent">1 in 4</p>
-              <p className="text-xs text-muted-foreground">U.S. adults live with a disability</p>
-            </div>
           </div>
         </div>
       </section>

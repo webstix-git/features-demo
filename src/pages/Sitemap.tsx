@@ -13,6 +13,7 @@ const pages = [
   { name: "Sales Tips", path: "/tips" },
   { name: "Local SEO Plans", path: "/local-seo-plans" },
   { name: "AI Readiness — Service Index Pages", path: "/ai-readiness-service-index" },
+  { name: "ADA Compliance", path: "/ada-compliance" },
 ];
 
 const Sitemap = () => {

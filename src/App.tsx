@@ -21,6 +21,7 @@ const Tips = lazy(() => import("./pages/Tips"));
 const LocalSEOPlans = lazy(() => import("./pages/LocalSEOPlans"));
 const AIReadinessServiceIndex = lazy(() => import("./pages/AIReadinessServiceIndex"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
+const ADACompliance = lazy(() => import("./pages/ADACompliance"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/local-seo-plans" element={<LocalSEOPlans />} />
             <Route path="/ai-readiness-service-index" element={<AIReadinessServiceIndex />} />
             <Route path="/sitemap" element={<Sitemap />} />
+            <Route path="/ada-compliance" element={<ADACompliance />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

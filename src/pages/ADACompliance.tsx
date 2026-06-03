@@ -6,9 +6,9 @@ import adaPrinciples from "@/assets/ada-principles.jpg";
 import adaCustom from "@/assets/ada-custom.jpg";
 
 const principles = [
-  { icon: Eye, name: "Perceivable", text: "Information and UI must be presentable to users in ways they can perceive — alt text, captions, sufficient contrast." },
-  { icon: Keyboard, name: "Operable", text: "Interface and navigation must be operable — keyboard access, enough time, no seizure triggers." },
-  { icon: Brain, name: "Understandable", text: "Information and UI operation must be understandable — readable text, predictable behavior, input assistance." },
+  { icon: Eye, name: "Perceivable", text: "Information and UI must be presentable to users in ways they can perceive, alt text, captions, sufficient contrast." },
+  { icon: Keyboard, name: "Operable", text: "Interface and navigation must be operable, keyboard access, enough time, no seizure triggers." },
+  { icon: Brain, name: "Understandable", text: "Information and UI operation must be understandable, readable text, predictable behavior, input assistance." },
   { icon: Code2, name: "Robust", text: "Content must be robust enough to be interpreted by a wide range of assistive technologies." },
 ];
 
@@ -58,7 +58,7 @@ const Bullet = ({ children, included = true }: { children: React.ReactNode; incl
 
 const ADACompliance = () => {
   useEffect(() => {
-    document.title = "ADA Compliance — Summit Builders Co.";
+    document.title = "ADA Compliance, Summit Builders Co.";
   }, []);
 
   return (
@@ -85,7 +85,7 @@ const ADACompliance = () => {
             </h1>
             <p className="text-lg leading-relaxed text-background/80">
               The Americans with Disabilities Act requires that digital experiences be usable by everyone.
-              We build to the WCAG 2.1 / 2.2 technical standard — reducing legal exposure, widening your
+              We build to the WCAG 2.1 / 2.2 technical standard, reducing legal exposure, widening your
               audience, and lifting search performance along the way.
             </p>
           </div>
@@ -103,7 +103,7 @@ const ADACompliance = () => {
               assistive technology can use your site without barriers.
             </p>
             <p className="mb-8 text-base leading-relaxed text-muted-foreground">
-              WCAG is organized around four principles — known as <strong className="text-foreground">POUR</strong>.
+              WCAG is organized around four principles, known as <strong className="text-foreground">POUR</strong>.
               Every requirement at every level traces back to one of them.
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -141,7 +141,7 @@ const ADACompliance = () => {
           <div className="mx-auto mb-14 max-w-2xl text-center">
             <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl">Conformance Levels</h2>
             <p className="text-base text-muted-foreground">
-              WCAG defines three increasing levels of accessibility. Our standard build delivers up to AA —
+              WCAG defines three increasing levels of accessibility. Our standard build delivers up to AA ,
               the level cited in most ADA-related lawsuits and the practical bar for modern sites.
             </p>
           </div>
@@ -156,13 +156,13 @@ const ADACompliance = () => {
                 <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">Included</span>
               </div>
               <h3 className="mb-1 text-2xl font-bold text-foreground">Level A</h3>
-              <p className="mb-5 text-sm text-muted-foreground">Essential — the absolute minimum.</p>
+              <p className="mb-5 text-sm text-muted-foreground">Essential, the absolute minimum.</p>
               <ul className="space-y-2.5">
                 {levelA.map((item) => <Bullet key={item}>{item}</Bullet>)}
               </ul>
             </article>
 
-            {/* Level AA — featured */}
+            {/* Level AA, featured */}
             <article className="relative flex flex-col rounded-3xl border-2 border-accent bg-background p-7 shadow-xl lg:-translate-y-3">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-warm-gradient px-4 py-1 text-xs font-semibold text-primary-foreground shadow-md">
                 Our Standard
@@ -174,7 +174,7 @@ const ADACompliance = () => {
                 <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-foreground">Included</span>
               </div>
               <h3 className="mb-1 text-2xl font-bold text-foreground">Level AA</h3>
-              <p className="mb-5 text-sm text-muted-foreground">Standard — the target for most regulated sites.</p>
+              <p className="mb-5 text-sm text-muted-foreground">Standard, the target for most regulated sites.</p>
               <ul className="space-y-2.5">
                 {levelAA.map((item) => <Bullet key={item}>{item}</Bullet>)}
               </ul>
@@ -189,7 +189,7 @@ const ADACompliance = () => {
                 <span className="rounded-full border border-border bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground">Custom Scope</span>
               </div>
               <h3 className="mb-1 text-2xl font-bold text-foreground">Level AAA</h3>
-              <p className="mb-5 text-sm text-muted-foreground">Enhanced — quoted separately, case by case.</p>
+              <p className="mb-5 text-sm text-muted-foreground">Enhanced, quoted separately, case by case.</p>
               <ul className="space-y-2.5">
                 {levelAAA.map((item, i) => <Bullet key={item} included={i === 0}>{item}</Bullet>)}
               </ul>
@@ -220,7 +220,7 @@ const ADACompliance = () => {
             </h2>
             <p className="mb-4 text-base leading-relaxed text-muted-foreground">
               Where AA can be reliably delivered against a template, AAA touches choices that only make
-              sense in context — palette ratios that may rule out brand colors, copy rewritten to a lower
+              sense in context, palette ratios that may rule out brand colors, copy rewritten to a lower
               reading level, sign-language video production, and editorial review that continues after launch.
             </p>
             <p className="text-base leading-relaxed text-muted-foreground">
@@ -238,7 +238,7 @@ const ADACompliance = () => {
             Not sure where your site stands?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-base text-primary-foreground/85">
-            We'll audit your current site against WCAG 2.2 AA and give you a prioritized fix list —
+            We'll audit your current site against WCAG 2.2 AA and give you a prioritized fix list ,
             no obligation, no jargon.
           </p>
           <Link

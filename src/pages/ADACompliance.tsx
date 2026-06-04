@@ -191,8 +191,18 @@ const ADACompliance = () => {
               </ul>
             </article>
           </div>
+
+          <div className="mx-auto mt-14 max-w-3xl space-y-5 text-base leading-relaxed text-muted-foreground">
+            <p>
+              For most businesses working toward ADA website compliance, WCAG Level AA is usually the right target. It is the most commonly referenced accessibility standard, covers the issues that affect most users, and helps reduce legal risk without forcing unnecessary design compromises.
+            </p>
+            <p>
+              Level AAA is more demanding and often requires a much higher level of custom planning, content adjustment, and development work. While AAA can be appropriate in certain situations, it is not typically required for general ADA compliance and may not be realistic or necessary for every website.
+            </p>
+          </div>
         </div>
       </section>
+
 
       {/* Why AAA is custom */}
       <section className="container mx-auto px-4 py-20">

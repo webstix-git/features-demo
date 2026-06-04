@@ -137,7 +137,7 @@ const ADACompliance = () => {
           <div className="mx-auto mb-14 max-w-2xl text-center">
             <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl">Conformance Levels</h2>
             <p className="text-base text-muted-foreground">
-              WCAG defines three increasing levels of accessibility. Our standard build delivers up to AA ,
+              WCAG defines three increasing levels of accessibility. Our standard build delivers up to AA,
               the level cited in most ADA-related lawsuits and the practical bar for modern sites.
             </p>
           </div>

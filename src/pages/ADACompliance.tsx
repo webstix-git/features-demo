@@ -192,7 +192,7 @@ const ADACompliance = () => {
             </article>
           </div>
 
-          <div className="mx-auto mt-14 max-w-3xl space-y-5 text-base leading-relaxed text-muted-foreground">
+          <div className="mt-14 space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
               For most businesses working toward ADA website compliance, WCAG Level AA is usually the right target. It is the most commonly referenced accessibility standard, covers the issues that affect most users, and helps reduce legal risk without forcing unnecessary design compromises.
             </p>

@@ -121,46 +121,60 @@ const AdvancedPopupBanner = () => {
 
       {/* Use cases — alternating rows */}
       <section className="container mx-auto px-4 py-20">
-        <div className="mx-auto mb-14 max-w-2xl text-center">
+        <div className="mx-auto mb-14 max-w-2xl">
+          <span className="mb-3 block text-xs font-semibold uppercase tracking-wider text-accent">
+            In practice
+          </span>
           <h2 className="mb-3 text-2xl font-bold text-foreground md:text-3xl">Common use cases</h2>
           <p className="text-muted-foreground">
             A few ways businesses put the advanced pop-up to work.
           </p>
         </div>
-        <div className="mx-auto max-w-4xl space-y-4">
+        <div className="grid gap-6 md:grid-cols-2">
           {[
             {
               icon: Tag,
+              label: "01",
               title: "Announce a seasonal offer",
               body: "Show a limited-time discount to first-time visitors on your services or pricing page.",
             },
             {
               icon: Mail,
+              label: "02",
               title: "Capture emails before people leave",
               body: "Use exit intent to invite visitors onto your newsletter with a short, friendly prompt.",
             },
             {
               icon: Megaphone,
+              label: "03",
               title: "Highlight a new project or update",
               body: "Point returning visitors to a recently added case study or landing page.",
             },
             {
               icon: Filter,
+              label: "04",
               title: "Segment by traffic source",
               body: "Greet visitors from a Google Ad or email campaign with a message tailored to that audience.",
             },
           ].map((item) => (
-            <div key={item.title} className="flex items-start gap-5 rounded-xl border border-border bg-background p-6">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                <item.icon className="h-5 w-5 text-accent" />
+            <div
+              key={item.title}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-background p-8 transition-colors hover:border-accent/40"
+            >
+              <div className="mb-6 flex items-center justify-between">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
+                  <item.icon className="h-5 w-5" />
+                </div>
+                <span className="text-xs font-semibold tracking-wider text-muted-foreground/60">
+                  {item.label}
+                </span>
               </div>
-              <div>
-                <h3 className="mb-1 text-lg font-semibold text-foreground">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
-              </div>
+              <h3 className="mb-2 text-lg font-semibold text-foreground">{item.title}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
             </div>
           ))}
         </div>
+
       </section>
 
       {/* Demo bar — slim horizontal */}

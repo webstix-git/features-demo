@@ -23,6 +23,7 @@ const AIReadinessServiceIndex = lazy(() => import("./pages/AIReadinessServiceInd
 const Sitemap = lazy(() => import("./pages/Sitemap"));
 const ADACompliance = lazy(() => import("./pages/ADACompliance"));
 const NewsletterSignup = lazy(() => import("./pages/NewsletterSignup"));
+const AdvancedPopupBanner = lazy(() => import("./pages/AdvancedPopupBanner"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
             <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/ada-compliance" element={<ADACompliance />} />
             <Route path="/newsletter-signup" element={<NewsletterSignup />} />
+            <Route path="/advanced-popup-banner" element={<AdvancedPopupBanner />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

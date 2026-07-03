@@ -21,19 +21,14 @@ const NewsletterSignup = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <section className="container mx-auto px-4 pt-32 pb-16">
-        <div className="max-w-3xl">
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-            <Mail className="h-3.5 w-3.5 text-accent" />
-            Newsletter Feature
-          </span>
-          <h1 className="mb-5 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+      <section className="relative overflow-hidden bg-teal-gradient pt-28 pb-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="mb-4 text-4xl font-bold text-primary-foreground md:text-5xl">
             Newsletter Sign-Up
           </h1>
-          <p className="text-lg leading-relaxed text-muted-foreground">
-            A simple way for visitors to stay in touch with your business. The newsletter sign-up gives people
-            a clear place to leave their email so you can share updates, new work, and announcements on your
-            own schedule.
+          <p className="mx-auto max-w-2xl text-lg text-primary-foreground/70">
+            A simple way for visitors to stay in touch with your business. Give people a clear place to
+            leave their email so you can share updates, new work, and announcements on your own schedule.
           </p>
         </div>
       </section>

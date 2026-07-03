@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MonitorSmartphone, X, Sparkles, Target, Timer, Megaphone, CheckCircle2 } from "lucide-react";
+import { MonitorSmartphone, X, Sparkles, Target, Timer, Megaphone, MousePointerClick, ArrowDownToLine, LogOut, Filter, Tag, Mail, Bell } from "lucide-react";
 import popupDemo from "@/assets/popup-banner-demo.jpg";
 
 const AdvancedPopupBanner = () => {
@@ -11,91 +11,107 @@ const AdvancedPopupBanner = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <section className="relative overflow-hidden bg-teal-gradient pt-28 pb-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="mb-4 text-4xl font-bold text-primary-foreground md:text-5xl">
-            Advanced Pop-Up Banner
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-primary-foreground/70">
-            A flexible on-site message that appears at the right moment to guide visitors, share an offer,
-            or highlight something they might otherwise miss.
-          </p>
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 pt-20 pb-20">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="order-2 lg:order-1">
-            <h2 className="mb-5 text-2xl font-bold text-foreground md:text-3xl">
-              What this feature does
-            </h2>
-            <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
-              <p>
-                An advanced pop-up banner is a small window that opens on top of your website to show a
-                specific message. Unlike a basic pop-up that shows the moment someone lands on your site,
-                an advanced version lets you control when it appears, who sees it, and how often.
-              </p>
-              <p>
-                You can trigger it after a visitor scrolls past a certain point, spends a set amount of
-                time on the page, moves their cursor toward the tab bar, or clicks a particular link. You
-                can also limit it to specific pages, first-time visitors, returning visitors, or people
-                coming from a certain source such as a Google Ad or an email campaign.
-              </p>
-              <p>
-                Common uses include announcing a seasonal offer, collecting emails before someone leaves,
-                sharing an important update, promoting a new project, or steering visitors to a page you
-                want them to see. Each pop-up can be paired with an image, a call to action button, or a
-                short form depending on the goal.
-              </p>
-            </div>
-          </div>
-
-          <div className="order-1 lg:order-2">
-            <div className="overflow-hidden rounded-2xl border border-border shadow-lg">
-              <img
-                src={popupDemo}
-                alt="Laptop on a wooden desk showing a pop-up banner overlay on a website"
-                width={1280}
-                height={896}
-                loading="lazy"
-                className="h-auto w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-card/50 py-16">
+      {/* Hero with inline CTA */}
+      <section className="relative overflow-hidden bg-teal-gradient pt-28 pb-20">
         <div className="container mx-auto px-4">
-          <div className="mx-auto mb-12 max-w-2xl text-center">
-            <h2 className="mb-3 text-2xl font-bold text-foreground md:text-3xl">Why businesses use it</h2>
-            <p className="text-muted-foreground">
-              A few practical reasons to add an advanced pop-up banner to your site.
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-7">
+              <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-medium text-primary-foreground/80">
+                <Sparkles className="h-3.5 w-3.5 text-accent" />
+                Feature Overview
+              </span>
+              <h1 className="mb-5 text-4xl font-bold text-primary-foreground md:text-5xl lg:text-6xl">
+                Advanced Pop-Up Banner
+              </h1>
+              <p className="mb-8 max-w-xl text-lg text-primary-foreground/70">
+                A flexible on-site message that appears at the right moment to guide visitors, share an offer,
+                or highlight something they might otherwise miss.
+              </p>
+              <button
+                type="button"
+                onClick={() => setOpen(true)}
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground hover:bg-accent/90 transition-colors"
+              >
+                <Sparkles className="h-4 w-4" />
+                Launch demo pop-up
+              </button>
+            </div>
+            <div className="lg:col-span-5">
+              <div className="relative">
+                <div className="overflow-hidden rounded-2xl border border-primary-foreground/10 shadow-2xl">
+                  <img
+                    src={popupDemo}
+                    alt="Laptop on a wooden desk showing a pop-up banner overlay on a website"
+                    width={1280}
+                    height={896}
+                    loading="lazy"
+                    className="h-auto w-full"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -left-6 hidden md:block rounded-xl border border-border bg-background p-4 shadow-xl max-w-[220px]">
+                  <div className="mb-2 flex items-center gap-2">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-md bg-accent/10">
+                      <Bell className="h-3.5 w-3.5 text-accent" />
+                    </div>
+                    <span className="text-xs font-semibold text-foreground">Triggered</span>
+                  </div>
+                  <p className="text-xs leading-relaxed text-muted-foreground">
+                    Shown after 15 seconds on the pricing page.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What it does — single column, wide */}
+      <section className="container mx-auto px-4 pt-24 pb-16">
+        <div className="mx-auto max-w-4xl">
+          <span className="mb-3 block text-xs font-semibold uppercase tracking-wider text-accent">
+            About the feature
+          </span>
+          <h2 className="mb-6 text-3xl font-bold text-foreground md:text-4xl">
+            What this feature does
+          </h2>
+          <div className="space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p>
+              An advanced pop-up banner is a small window that opens on top of your website to show a
+              specific message. Unlike a basic pop-up that shows the moment someone lands on your site,
+              an advanced version lets you control when it appears, who sees it, and how often.
+            </p>
+            <p>
+              You can trigger it after a visitor scrolls past a certain point, spends a set amount of
+              time on the page, moves their cursor toward the tab bar, or clicks a particular link. You
+              can also limit it to specific pages, first-time visitors, returning visitors, or people
+              coming from a certain source such as a Google Ad or an email campaign.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+        </div>
+      </section>
+
+      {/* Trigger types — horizontal strip */}
+      <section className="bg-card/50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="mb-12 max-w-2xl">
+            <h2 className="mb-3 text-2xl font-bold text-foreground md:text-3xl">Ways to trigger it</h2>
+            <p className="text-muted-foreground">
+              Choose one trigger or combine several. Each pop-up can behave differently depending on how
+              and where visitors land.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              {
-                icon: Target,
-                title: "Reach the right visitors",
-                body: "Rules based on page, source, or behavior mean the message only shows to people it actually applies to.",
-              },
-              {
-                icon: Timer,
-                title: "Show at the right moment",
-                body: "Trigger by scroll depth, time on page, or exit intent so the pop-up feels helpful instead of intrusive.",
-              },
-              {
-                icon: Megaphone,
-                title: "Move visitors to action",
-                body: "Highlight a promotion, capture an email, or push people toward a page they might otherwise miss.",
-              },
+              { icon: Timer, title: "Time on page", body: "Show after a set number of seconds." },
+              { icon: ArrowDownToLine, title: "Scroll depth", body: "Appear once someone passes a section." },
+              { icon: LogOut, title: "Exit intent", body: "Catch visitors as their cursor leaves the tab." },
+              { icon: MousePointerClick, title: "Click trigger", body: "Open when a specific link is clicked." },
             ].map((item) => (
               <div key={item.title} className="rounded-xl border border-border bg-background p-6">
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10">
                   <item.icon className="h-5 w-5 text-accent" />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-foreground">{item.title}</h3>
+                <h3 className="mb-1.5 text-base font-semibold text-foreground">{item.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
               </div>
             ))}
@@ -103,30 +119,73 @@ const AdvancedPopupBanner = () => {
         </div>
       </section>
 
+      {/* Use cases — alternating rows */}
       <section className="container mx-auto px-4 py-20">
-        <div className="mx-auto max-w-2xl">
-          <div className="rounded-2xl border border-primary-foreground/10 bg-teal-gradient p-8 md:p-10 shadow-lg">
-            <div className="mb-6 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-foreground/10">
+        <div className="mx-auto mb-14 max-w-2xl text-center">
+          <h2 className="mb-3 text-2xl font-bold text-foreground md:text-3xl">Common use cases</h2>
+          <p className="text-muted-foreground">
+            A few ways businesses put the advanced pop-up to work.
+          </p>
+        </div>
+        <div className="mx-auto max-w-4xl space-y-4">
+          {[
+            {
+              icon: Tag,
+              title: "Announce a seasonal offer",
+              body: "Show a limited-time discount to first-time visitors on your services or pricing page.",
+            },
+            {
+              icon: Mail,
+              title: "Capture emails before people leave",
+              body: "Use exit intent to invite visitors onto your newsletter with a short, friendly prompt.",
+            },
+            {
+              icon: Megaphone,
+              title: "Highlight a new project or update",
+              body: "Point returning visitors to a recently added case study or landing page.",
+            },
+            {
+              icon: Filter,
+              title: "Segment by traffic source",
+              body: "Greet visitors from a Google Ad or email campaign with a message tailored to that audience.",
+            },
+          ].map((item) => (
+            <div key={item.title} className="flex items-start gap-5 rounded-xl border border-border bg-background p-6">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent/10">
+                <item.icon className="h-5 w-5 text-accent" />
+              </div>
+              <div>
+                <h3 className="mb-1 text-lg font-semibold text-foreground">{item.title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Demo bar — slim horizontal */}
+      <section className="container mx-auto px-4 pb-24">
+        <div className="rounded-2xl border border-primary-foreground/10 bg-teal-gradient p-8 md:p-10 shadow-lg">
+          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+            <div className="flex items-start gap-4">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary-foreground/10">
                 <MonitorSmartphone className="h-5 w-5 text-accent" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-primary-foreground">Try the pop-up</h3>
-                <p className="text-sm text-primary-foreground/70">A working example of how it feels to visitors.</p>
+                <h3 className="text-xl font-semibold text-primary-foreground">See it in action</h3>
+                <p className="text-sm text-primary-foreground/70">
+                  Click the button to open a sample pop-up the way a visitor would see it.
+                </p>
               </div>
             </div>
             <button
               type="button"
               onClick={() => setOpen(true)}
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground hover:bg-accent/90 transition-colors"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground hover:bg-accent/90 transition-colors"
             >
               <Sparkles className="h-4 w-4" />
               Launch demo pop-up
             </button>
-            <div className="mt-5 flex items-start gap-2 text-xs text-primary-foreground/70">
-              <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
-              <span>Click the button to see how a triggered pop-up appears on the page.</span>
-            </div>
           </div>
         </div>
       </section>

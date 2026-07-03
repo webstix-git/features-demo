@@ -33,7 +33,7 @@ const NewsletterSignup = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 pb-20">
+      <section className="container mx-auto px-4 pt-20 pb-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-2 lg:order-1">
             <h2 className="mb-5 text-2xl font-bold text-foreground md:text-3xl">

@@ -114,14 +114,14 @@ const NewsletterSignup = () => {
 
       <section className="container mx-auto px-4 py-20">
         <div className="mx-auto max-w-2xl">
-          <div className="rounded-2xl border border-border bg-warm-gradient p-8 md:p-10">
+          <div className="rounded-2xl border border-primary-foreground/10 bg-teal-gradient p-8 md:p-10 shadow-lg">
             <div className="mb-6 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/20">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-foreground/10">
                 <Mail className="h-5 w-5 text-accent" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-foreground">Try the sign-up</h3>
-                <p className="text-sm text-muted-foreground">A working example of how it feels to visitors.</p>
+                <h3 className="text-lg font-semibold text-primary-foreground">Try the sign-up</h3>
+                <p className="text-sm text-primary-foreground/70">A working example of how it feels to visitors.</p>
               </div>
             </div>
             <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
@@ -131,7 +131,7 @@ const NewsletterSignup = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
-                className="flex-1 rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+                className="flex-1 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent"
               />
               <button
                 type="submit"
@@ -141,7 +141,7 @@ const NewsletterSignup = () => {
                 Subscribe
               </button>
             </form>
-            <div className="mt-5 flex items-start gap-2 text-xs text-muted-foreground">
+            <div className="mt-5 flex items-start gap-2 text-xs text-primary-foreground/70">
               <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
               <span>No spam. Unsubscribe any time. This demo does not actually store your email.</span>
             </div>

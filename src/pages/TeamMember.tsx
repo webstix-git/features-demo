@@ -39,10 +39,10 @@ const TeamMember = () => {
               <img
                 src={member.img}
                 alt={`${member.name}, ${member.role} at Summit Builders Co.`}
-                width={768}
-                height={1024}
+                width={1200}
+                height={1500}
                 decoding="async"
-                className="aspect-[3/4] w-full object-cover"
+                className="aspect-[4/5] w-full object-cover object-top"
               />
             </div>
             <div>
@@ -129,11 +129,11 @@ const TeamMember = () => {
                 <img
                   src={m.img}
                   alt={`${m.name}, ${m.role} at Summit Builders Co.`}
-                  width={768}
-                  height={1024}
+                  width={1200}
+                  height={1500}
                   loading="lazy"
                   decoding="async"
-                  className="aspect-[4/3] w-full object-cover"
+                  className="aspect-[4/5] w-full object-cover object-top"
                 />
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-foreground group-hover:text-accent transition-colors">{m.name}</h3>

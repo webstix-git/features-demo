@@ -18,6 +18,8 @@ const Portfolio = lazy(() => import("./pages/Portfolio"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Tips = lazy(() => import("./pages/Tips"));
+const Team = lazy(() => import("./pages/Team"));
+const TeamMember = lazy(() => import("./pages/TeamMember"));
 const LocalSEOPlans = lazy(() => import("./pages/LocalSEOPlans"));
 const AIReadinessServiceIndex = lazy(() => import("./pages/AIReadinessServiceIndex"));
 const Sitemap = lazy(() => import("./pages/Sitemap"));
@@ -48,6 +50,8 @@ const App = () => (
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/tips" element={<Tips />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/team/:slug" element={<TeamMember />} />
             <Route path="/local-seo-plans" element={<LocalSEOPlans />} />
             <Route path="/ai-readiness-service-index" element={<AIReadinessServiceIndex />} />
             <Route path="/sitemap" element={<Sitemap />} />

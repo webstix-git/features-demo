@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Case Studies", path: "/case-studies" },
   { name: "Blog", path: "/blog" },
   { name: "Testimonials", path: "/testimonials" },
+  { name: "Our Team", path: "/team" },
   { name: "FAQs", path: "/faqs" },
   { name: "Local SEO", path: "/local-seo-plans" },
   { name: "Contact", path: "/contact" },

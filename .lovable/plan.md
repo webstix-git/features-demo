@@ -1,79 +1,30 @@
-# ADA Compliance Page
+# Plan: "Meet The Team" page (/meet-the-team)
 
-Create a new informational page explaining ADA/WCAG compliance, the three conformance levels, what's included in each, and clarify that the current package covers up to AA while AAA is a custom-scoped add-on. Page should look neat, professional, and visually polished with supporting imagery.
+## Goal
+Create a new "Meet The Team" page at `/meet-the-team` reusing the existing team content (members, photos, roles, intro copy) from "Our Team" (/team), laid out like the example at olsonconstructionlax.com/team: a simple, clean grid of portraits with name and role only.
 
-## Page
+## What gets built
 
-- Route: `/ada-compliance`
-- File: `src/pages/ADACompliance.tsx` (lazy-loaded in `src/App.tsx`)
-- Document title + H1: "ADA Compliance"
+### 1. New page: `src/pages/MeetTheTeam.tsx`
+- **Hero**: `bg-teal-gradient` banner matching the rest of the site, with "Meet the Team" as the H1 and a one-line intro reusing the Our Team positioning ("The People Behind the Build" / "Designers, superintendents, and project managers who stay on your job from first sketch to final walkthrough.").
+- **Member grid**: simple Olson-style grid (2 cols mobile / 3 cols desktop) reusing the `teamMembers` array from `src/data/teamMembers.ts`. Each card shows portrait (4:5, object-top), name, and role only. No links, no bios, no email/linkedin rows.
+- **No Option A/B toggle, no Feature Guide drawer** — this is a plain page.
+- **CTA**: keep the existing "Want to talk to one of them?" contact CTA from /team for consistency (contact CTA is the one primary action on the page).
+- Sets its own `<title>` ("Meet the Team — Summit Builders Co.") and meta description, and uses semantic `h1`/`h2` per accessibility rules.
+- No new images: reuses the six existing portraits in `public/images/team-*.jpg`.
 
-## Sections
+### 2. Route registration: `src/App.tsx`
+- Lazy-import `MeetTheTeam` and add `<Route path="/meet-the-team" element={<MeetTheTeam />} />` with the other lazy routes.
 
-1. **Hero** — Full-width banner with a generated hero image (warm, inclusive workspace / accessibility-themed photo). Overlay with title, short intro about ADA (Americans with Disabilities Act) and WCAG 2.1/2.2 as the technical standard, and why it matters (legal risk, broader audience, SEO).
+### 3. Footer link: `src/components/Footer.tsx`
+- Add "Meet the Team" to the Quick Links column (footer only; navbar unchanged).
 
-2. **What is ADA Compliance?** — Two-column layout: text on one side covering the four POUR principles (Perceivable, Operable, Understandable, Robust); a supporting image on the other (e.g., person using assistive tech / keyboard navigation close-up).
+### 4. Site map: `src/pages/Sitemap.tsx`
+- Add `{ name: "Meet the Team", path: "/meet-the-team" }` to the pages list.
 
-3. **Conformance Levels** — Three side-by-side cards, each with a small illustrative icon header strip (lucide icons + subtle background image or pattern):
+## Not changed
+- Existing /team and /team/:slug pages stay exactly as they are.
+- No new image generation, no new dependencies.
 
-   - **Level A — Essential (Included)**
-     - Alt text on all images
-     - Keyboard navigation for all functionality
-     - Video captions (pre-recorded)
-     - No content flashing >3x/sec
-     - Page titles and language attribute
-     - Form inputs with labels
-     - Logical reading order
-
-   - **Level AA — Standard (Included in current package)**
-     - Everything in Level A
-     - Color contrast 4.5:1 (text), 3:1 (large text/UI)
-     - Resizable text up to 200%
-     - Multiple ways to find pages
-     - Consistent navigation
-     - Visible focus indicators
-     - Error identification & suggestions on forms
-     - Descriptive headings and labels
-     - Audio descriptions for video
-     - Status messages announced to screen readers
-
-   - **Level AAA — Enhanced (Not included — custom scope)**
-     - Everything in AA
-     - Color contrast 7:1 (text), 4.5:1 (large text)
-     - Sign language interpretation for video
-     - Extended audio descriptions
-     - No timing/time limits
-     - Reading level no more advanced than lower secondary
-     - Context-sensitive help
-     - Pronunciation guides
-     - Re-authentication without data loss
-
-4. **Why AAA is custom** — Callout band with a supporting image (e.g., design-review / drafting scene). Explains AAA requires content rewrites, sign-language video production, contrast-driven redesigns, and ongoing editorial review — each case-by-case, quoted separately.
-
-5. **CTA** — "Request an Accessibility Audit" button linking to `/contact`.
-
-## Imagery
-
-Generate 3 locally-hosted images (per project memory — no external placeholders) into `src/assets/`:
-
-- `ada-hero.jpg` — wide, warm, inclusive workspace scene that conveys accessibility (~1600×900).
-- `ada-principles.jpg` — close-up of hands on keyboard / assistive tech (~1200×900).
-- `ada-custom.jpg` — designers reviewing wireframes/contrast swatches at a table (~1200×800).
-
-All images use `loading="lazy"`, explicit `width`/`height`, and meaningful `alt` text. Use the project's earthy palette aesthetic (warm tones) so they sit naturally with existing pages.
-
-## Wiring
-
-- Add lazy import + `<Route path="/ada-compliance" element={<ADACompliance />} />` in `src/App.tsx`.
-- Add "ADA Compliance" entry to the `pages` array in `src/pages/Sitemap.tsx`.
-
-## Style notes
-
-- Reuse existing semantic tokens (`bg-background`, `text-foreground`, `bg-warm-gradient`, `text-accent`, `border-border`, card patterns from `LocalSEOPlans`).
-- Three-tier cards: A and AA get an "Included" badge (`bg-accent text-accent-foreground`); AAA gets a muted "Custom Scope" badge with a distinct outlined treatment.
-- Lucide icons: `Accessibility`, `Check`, `ShieldCheck`, `Sparkles`, `X`.
-- Bespoke organic layout — no generic page template wrapper.
-
-## Out of scope
-
-- No navbar link (already 9 items). Reachable via Sitemap. Confirm if you'd also like it added to the footer Quick Links.
+## Verification
+- Playwright check on localhost:8080: /meet-the-team renders all 6 members with correct names/roles, footer and site map links navigate to the page, no console errors.

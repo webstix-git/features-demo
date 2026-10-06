@@ -19,6 +19,7 @@ const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Tips = lazy(() => import("./pages/Tips"));
 const Team = lazy(() => import("./pages/Team"));
+const MeetTheTeam = lazy(() => import("./pages/MeetTheTeam"));
 const TeamMember = lazy(() => import("./pages/TeamMember"));
 const LocalSEOPlans = lazy(() => import("./pages/LocalSEOPlans"));
 const AIReadinessServiceIndex = lazy(() => import("./pages/AIReadinessServiceIndex"));

@@ -9,6 +9,7 @@ const pages = [
   { name: "Case Studies", path: "/case-studies" },
   { name: "Testimonials", path: "/testimonials" },
   { name: "Our Team", path: "/team" },
+  { name: "Meet the Team", path: "/meet-the-team" },
   { name: "FAQs", path: "/faqs" },
   { name: "Contact", path: "/contact" },
   { name: "Sales Tips", path: "/tips" },

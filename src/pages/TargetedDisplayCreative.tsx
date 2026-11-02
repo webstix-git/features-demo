@@ -297,16 +297,6 @@ const TargetedDisplayCreative = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className={`${RED} py-16`}>
-        <div className="container mx-auto flex flex-col items-start gap-8 px-4 md:flex-row md:items-center md:justify-between">
-          <div className="max-w-3xl">
-            <h2 className="mb-4 text-3xl font-medium text-primary-foreground md:text-4xl">Ready to Get Professional Display Ad Creative?</h2>
-            <p className="text-lg text-primary-foreground/85">Tell us about your brand, your goals, and the sizes you need, we’ll put together a creative package that fits.</p>
-          </div>
-          <Pill variant="white">Get a Free Creative Quote</Pill>
-        </div>
-      </section>
     </div>
   );
 };

@@ -53,12 +53,6 @@ const concepts = [
   ["honest-abe-roofing_a2_example-970x250-px.gif", "300×250, 728×90, 160×600"],
 ];
 
-const packages = [
-  { name: "Social Image", price: "40", desc: "1080×1080 static image with ad copy", rows: [["Format", "1 static image"]] },
-  { name: "Static Banner Bundle", price: "90", desc: "5 standard sizes", rows: [["Revisions included", "2"], ["Each extra revision", "$20"]] },
-  { name: "Animated GIF Banner Bundle", price: "110", desc: "5 standard sizes", rows: [["Revisions included", "2"], ["Each extra revision", "$50"]] },
-];
-
 const audiences = [
   { icon: MapPin, title: "Local service businesses", text: "Plumbers, HVAC, electricians, dentists, lawyers, chiropractors" },
   { icon: ShoppingCart, title: "Retail & restaurants", text: "Promoting sales, new locations, or seasonal menus" },
@@ -263,46 +257,6 @@ const TargetedDisplayCreative = () => {
             ))}
           </div>
           <div className="mt-8 text-center"><Pill>Get a Free Creative Quote</Pill></div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="bg-[#111111] py-20 md:py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="mb-6 text-center text-5xl font-medium text-primary-foreground md:text-6xl">Pricing</h2>
-          <h3 className="mb-8 text-center text-3xl font-medium text-primary-foreground">Creative Packages</h3>
-          <div className="grid gap-8 md:grid-cols-3">
-            {packages.map((p, i) => {
-              const featured = i === packages.length - 1;
-              return (
-                <div key={p.name} className={`rounded-3xl border p-8 ${featured ? `${RED} border-transparent` : "border-primary-foreground/15 bg-primary-foreground/10"}`}>
-                  <h4 className={`mb-6 text-lg font-medium uppercase ${featured ? "text-primary-foreground" : "text-primary-foreground/70"}`}>{p.name}</h4>
-                  <p className="mb-6 text-7xl font-bold leading-none text-primary-foreground"><span className="align-top text-3xl">$</span>{p.price}</p>
-                  <p className="border-b border-primary-foreground/20 pb-4 text-primary-foreground/70">{p.desc}</p>
-                  <dl className="space-y-2 pt-4">
-                    {p.rows.map(([k, v]) => (
-                      <div key={k} className="flex justify-between">
-                        <dt className="text-primary-foreground/70">{k}</dt><dd className="font-semibold text-primary-foreground">{v}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                </div>
-              );
-            })}
-          </div>
-          <h3 className="mb-6 mt-20 text-center text-2xl font-medium text-primary-foreground">Add-ons</h3>
-          <div className="mx-auto max-w-4xl divide-y divide-primary-foreground/15 overflow-hidden rounded-2xl border border-primary-foreground/15 bg-primary-foreground/10">
-            {[
-              ["Additional creative refresh", "A new take on your existing campaign", "$300", "per new ad set"],
-              ["Landing page design / build", "Final price depends on scope", "$1,200–$3,000", ""],
-            ].map(([t, d, price, unit]) => (
-              <div key={t} className="flex items-center justify-between gap-4 px-7 py-6">
-                <div><h4 className="text-lg font-medium text-primary-foreground">{t}</h4><p className="text-sm text-primary-foreground/70">{d}</p></div>
-                <p className="text-right text-2xl font-bold text-primary-foreground">{price} {unit && <span className="text-sm font-normal text-primary-foreground/70">{unit}</span>}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-14 text-center"><Pill variant="white">Get Started</Pill></div>
         </div>
       </section>
 

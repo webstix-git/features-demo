@@ -77,3 +77,284 @@ const faqs = [
   ["What's the difference between Display Ads and Google Search Ads?", "Google Search Ads capture existing demand, someone searches “plumber near me” and your ad appears. Display ads create demand, they put your business in front of people before they search. They work well together, though Webstix’s role here is the display creative, not the search campaign."],
 ];
 
+const Pill = ({ children, variant = "red" }: { children: React.ReactNode; variant?: "red" | "white" }) => (
+  <Link
+    to="/contact"
+    className={`inline-flex items-center gap-2 rounded-full px-8 py-3.5 font-medium transition-all duration-200 hover:-translate-y-0.5 ${
+      variant === "red" ? `${RED} text-primary-foreground hover:opacity-90` : "bg-background text-foreground hover:bg-muted"
+    }`}
+  >
+    {children} {variant === "red" && <ArrowRight className="h-4 w-4" />}
+  </Link>
+);
+
+const TargetedDisplayCreative = () => {
+  useEffect(() => {
+    document.title = "Targeted Display Creative — Summit Builders Co.";
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute("content", "Professionally designed display ads, built to spec for the web and ready to launch. View formats, pricing, and FAQs.");
+  }, []);
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      {/* Banner */}
+      <section className="relative overflow-hidden bg-foreground">
+        <img src={`${IMG}/display-network.jpg`} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover opacity-30" />
+        <div className="relative container mx-auto px-4 py-24 text-center md:py-28">
+          <h1 className="text-4xl font-bold text-primary-foreground md:text-5xl">Targeted Display Creative</h1>
+        </div>
+      </section>
+      <nav aria-label="Breadcrumb" className="border-b border-border">
+        <div className="container mx-auto px-4 py-3 text-muted-foreground">
+          <Link to="/" className={`${RED_TEXT} underline`}>Home</Link> | <Link to="/sitemap" className={`${RED_TEXT} underline`}>Services</Link> | Targeted Display Creative
+        </div>
+      </nav>
+
+      {/* Intro */}
+      <section className="border-b border-border py-20 md:py-24">
+        <div className="container mx-auto grid items-center gap-12 px-4 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <h2 className="mb-6 text-3xl font-bold leading-tight text-foreground md:text-[2.5rem]">
+              <span className={RED_TEXT}>Professionally Designed Display Ads,</span> Built for the Web, Ready to Launch
+            </h2>
+            <p className="mb-6 leading-relaxed text-muted-foreground">
+              Targeted display ads put your business on the websites your ideal customers already visit. We design the ad creative: banners, native ads, and animated formats, built to spec for the platforms and placements you’re running on.
+            </p>
+            <div className={`${TAN} rounded-r-lg border-l-4 border-[#a6192e] px-8 py-6 font-medium leading-relaxed text-foreground`}>
+              You bring the strategy and the media plan (or your ad platform/agency partner). We get you the creative that actually gets noticed.
+            </div>
+          </div>
+          <figure>
+            <img src={`${IMG}/remote-work.jpg`} alt="Remote work devices showing an online event display ad" width={800} height={600} className="w-full rounded-3xl object-cover" />
+            <figcaption className="mt-6 pl-8 text-sm text-muted-foreground">AD: Online Event Banner</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      {/* What We Handle */}
+      <section className="py-20 md:py-24">
+        <div className="container mx-auto grid items-center gap-12 px-4 lg:grid-cols-2 lg:gap-16">
+          <img src={`${IMG}/meeting.jpg`} alt="Woman presenting ad concepts at a whiteboard" width={800} height={600} loading="lazy" className="w-full rounded-3xl object-cover" />
+          <div>
+            <h2 className="mb-6 text-3xl font-bold text-foreground md:text-4xl">What We <span className={RED_TEXT}>Handle</span></h2>
+            <ul>
+              {handle.map(({ icon: Icon, title, text }, i) => (
+                <li key={title} className={`flex gap-6 py-6 ${i < handle.length - 1 ? "border-b border-border" : ""}`}>
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-muted-foreground text-primary-foreground">
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <h3 className="mb-2 text-xl font-semibold text-foreground">{title}</h3>
+                    <p className="leading-relaxed text-muted-foreground">{text}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Video */}
+      <section className="bg-gradient-to-b from-foreground to-foreground/90 py-20 md:py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold text-primary-foreground md:text-4xl">The Digital Advertising Ecosystem, Explained</h2>
+          <div className="mx-auto aspect-video max-w-6xl overflow-hidden">
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube-nocookie.com/embed/NB3YO598ZOI"
+              title="Ad Tech Explained"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Formats */}
+      <section className={`${TAN} py-20 md:py-24`}>
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">Ad Formats We Design</h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            {formats.map((f) => (
+              <div key={f.title} className="overflow-hidden rounded-3xl border border-border bg-background">
+                <div className="flex aspect-[4/3] items-center justify-center bg-muted">
+                  <img src={`${IMG}/${f.img}`} alt={`${f.title} example`} loading="lazy" className="h-full w-full object-cover" />
+                </div>
+                <div className="p-8">
+                  <p className="mb-2 text-sm text-muted-foreground">{f.label}</p>
+                  <h3 className="mb-3 text-xl font-semibold text-foreground">{f.title.replace(/\b\w/g, (c) => c.toUpperCase())}</h3>
+                  <p className="text-muted-foreground">{f.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Placements */}
+      <section className="py-20 md:py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-4 text-center text-3xl font-bold text-foreground md:text-4xl">Where Your Ads Are Designed to Run</h2>
+          <p className="mb-12 text-center text-lg text-muted-foreground">We design display creative for the web-based placements your business actually uses:</p>
+          <div className="grid gap-8 md:grid-cols-3">
+            {placements.map((p) => (
+              <div key={p.title} className="overflow-hidden rounded-3xl border border-border">
+                <img src={`${IMG}/${p.img}`} alt={p.alt} width={600} height={450} loading="lazy" className="aspect-[4/3] w-full object-cover" />
+                <div className="p-8">
+                  <h3 className="mb-3 text-xl font-semibold text-foreground">{p.title}</h3>
+                  <p className="text-muted-foreground">{p.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className={`${GRAY} py-20 md:py-24`}>
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">How It Works</h2>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {steps.map((s, i) => (
+              <div key={s.title} className="rounded-2xl border border-border bg-background p-8">
+                <span className="mb-6 block text-6xl font-bold text-muted-foreground">{i + 1}</span>
+                <h3 className="mb-5 text-xl font-semibold text-foreground">{s.title}</h3>
+                <p className="leading-relaxed text-muted-foreground">{s.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* It's Yours */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className={`${RED} mx-auto grid max-w-6xl items-center gap-10 rounded-3xl px-8 py-12 md:grid-cols-[1fr_auto] md:px-20`}>
+            <div>
+              <h2 className="mb-5 text-3xl font-bold text-primary-foreground md:text-4xl">It’s Yours</h2>
+              <p className="text-lg leading-relaxed text-primary-foreground">
+                Once your project is complete and paid for, <strong>you have an unrestricted license from us to every final creative file,</strong> no restrictions and you can do what you want with it. It is ready to launch wherever your campaign runs. We still maintain authoring rights, technically, but we give you a full license to use or modify the creative as you wish.
+              </p>
+            </div>
+            <img src={`${IMG}/magnetic.svg`} alt="" aria-hidden="true" width={200} height={200} className="mx-auto w-40 md:w-52" />
+          </div>
+        </div>
+      </section>
+
+      {/* Concepts */}
+      <section className="pb-20 pt-8 md:pb-24">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-4xl font-bold text-foreground md:text-5xl">Advertising Design Concepts</h2>
+          <div className="columns-1 gap-6 md:columns-2">
+            {concepts.map(([img, label]) => (
+              <figure key={img} className={`${GRAY} mb-6 break-inside-avoid rounded-xl p-3 text-center`}>
+                <img src={`${IMG}/${img}`} alt={label.startsWith("AD:") ? label.replace("AD: ", "") + " display ad" : "Animated display ad example"} loading="lazy" className="w-full" />
+                <figcaption className="mt-4 pb-2 text-sm text-muted-foreground">{label}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="mt-8 text-center"><Pill>Get a Free Creative Quote</Pill></div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="bg-foreground py-20 md:py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-6 text-center text-5xl font-bold text-primary-foreground md:text-6xl">Pricing</h2>
+          <h3 className="mb-8 text-center text-3xl font-medium text-primary-foreground">Creative Packages</h3>
+          <div className="grid gap-8 md:grid-cols-3">
+            {packages.map((p, i) => {
+              const featured = i === packages.length - 1;
+              return (
+                <div key={p.name} className={`rounded-3xl border p-8 ${featured ? `${RED} border-transparent` : "border-primary-foreground/15 bg-primary-foreground/10"}`}>
+                  <h4 className={`mb-6 text-lg font-medium uppercase ${featured ? "text-primary-foreground" : "text-primary-foreground/70"}`}>{p.name}</h4>
+                  <p className="mb-6 text-7xl font-bold leading-none text-primary-foreground"><span className="align-top text-3xl">$</span>{p.price}</p>
+                  <p className="border-b border-primary-foreground/20 pb-4 text-primary-foreground/70">{p.desc}</p>
+                  <dl className="space-y-2 pt-4">
+                    {p.rows.map(([k, v]) => (
+                      <div key={k} className="flex justify-between">
+                        <dt className="text-primary-foreground/70">{k}</dt><dd className="font-semibold text-primary-foreground">{v}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              );
+            })}
+          </div>
+          <h3 className="mb-6 mt-20 text-center text-2xl font-medium text-primary-foreground">Add-ons</h3>
+          <div className="mx-auto max-w-4xl divide-y divide-primary-foreground/15 overflow-hidden rounded-2xl border border-primary-foreground/15 bg-primary-foreground/10">
+            {[
+              ["Additional creative refresh", "A new take on your existing campaign", "$300", "per new ad set"],
+              ["Landing page design / build", "Final price depends on scope", "$1,200–$3,000", ""],
+            ].map(([t, d, price, unit]) => (
+              <div key={t} className="flex items-center justify-between gap-4 px-7 py-6">
+                <div><h4 className="text-lg font-semibold text-primary-foreground">{t}</h4><p className="text-sm text-primary-foreground/70">{d}</p></div>
+                <p className="text-right text-2xl font-bold text-primary-foreground">{price} {unit && <span className="text-sm font-normal text-primary-foreground/70">{unit}</span>}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-14 text-center"><Pill variant="white">Get Started</Pill></div>
+        </div>
+      </section>
+
+      {/* Who */}
+      <section className="py-20 md:py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">Who This Is For</h2>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {audiences.map(({ icon: Icon, title, text }) => (
+              <div key={title} className={`${TAN} rounded-2xl border border-border p-8`}>
+                <span className="mb-8 flex h-16 w-16 items-center justify-center rounded-xl bg-background">
+                  <Icon className={`h-8 w-8 ${RED_TEXT}`} strokeWidth={1.5} aria-hidden="true" />
+                </span>
+                <h3 className="mb-4 text-xl font-semibold text-foreground">{title}</h3>
+                <p className="leading-relaxed text-muted-foreground">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className={`${GRAY} py-20 md:py-24`}>
+        <div className="container mx-auto grid gap-12 px-4 lg:grid-cols-[2fr_3fr]">
+          <div className="lg:sticky lg:top-28 lg:self-start">
+            <p className={`mb-4 text-sm font-semibold uppercase tracking-widest ${RED_TEXT}`}>FAQs</p>
+            <h2 className="mb-8 text-3xl font-bold text-foreground md:text-4xl">Frequently Asked Questions</h2>
+            <Pill>Ask Us Anything</Pill>
+          </div>
+          <div className="space-y-4">
+            {faqs.map(([q, a]) => (
+              <div key={q} className="rounded-xl bg-background p-6">
+                <h3 className="mb-4 text-lg font-semibold text-foreground">{q}</h3>
+                <p className="leading-relaxed text-muted-foreground">{a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className={`${RED} py-16`}>
+        <div className="container mx-auto flex flex-col items-start gap-8 px-4 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-3xl">
+            <h2 className="mb-4 text-3xl font-bold text-primary-foreground md:text-4xl">Ready to Get Professional Display Ad Creative?</h2>
+            <p className="text-lg text-primary-foreground/85">Tell us about your brand, your goals, and the sizes you need, we’ll put together a creative package that fits.</p>
+          </div>
+          <Pill variant="white">Get a Free Creative Quote</Pill>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default TargetedDisplayCreative;

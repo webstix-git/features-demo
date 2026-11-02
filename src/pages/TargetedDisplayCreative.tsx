@@ -247,7 +247,6 @@ const TargetedDisplayCreative = () => {
               </figure>
             ))}
           </div>
-          <div className="mt-8 text-center"><Pill>Get a Free Creative Quote</Pill></div>
         </div>
       </section>
 

@@ -186,8 +186,8 @@ const TargetedDisplayCreative = () => {
           <div className="grid gap-8 md:grid-cols-2">
             {formats.map((f) => (
               <div key={f.title} className="overflow-hidden rounded-3xl border border-border bg-[#ffffff]">
-                <div className="flex aspect-[4/3] items-center justify-center bg-muted">
-                  <img src={`${IMG}/${f.img}`} alt={`${f.title} example`} loading="lazy" className="h-full w-full object-cover" />
+                <div className="flex aspect-[4/3] items-center justify-center bg-muted p-4">
+                  <img src={`${IMG}/${f.img}`} alt={`${f.title} example`} loading="lazy" className="h-auto max-h-full w-auto max-w-full object-contain" />
                 </div>
                 <div className="p-8">
                   <p className="mb-2 text-sm text-muted-foreground">{f.label}</p>
@@ -257,7 +257,7 @@ const TargetedDisplayCreative = () => {
           <div className="columns-1 gap-6 md:columns-2">
             {concepts.map(([img, label]) => (
               <figure key={img} className={`${GRAY} mb-6 break-inside-avoid rounded-xl p-3 text-center`}>
-                <img src={`${IMG}/${img}`} alt={label.startsWith("AD:") ? label.replace("AD: ", "") + " display ad" : "Animated display ad example"} loading="lazy" className="w-full" />
+                <img src={`${IMG}/${img}`} alt={label.startsWith("AD:") ? label.replace("AD: ", "") + " display ad" : "Animated display ad example"} loading="lazy" className="mx-auto h-auto w-auto max-w-full" />
                 <figcaption className="mt-4 pb-2 text-sm text-muted-foreground">{label}</figcaption>
               </figure>
             ))}

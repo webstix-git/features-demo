@@ -109,7 +109,7 @@ const TargetedDisplayCreative = () => {
       <section className="relative overflow-hidden bg-[#111111]">
         <img src={`${IMG}/display-network.jpg`} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover opacity-30" />
         <div className="relative container mx-auto px-4 py-24 text-center md:py-28">
-          <h1 className="text-4xl font-bold text-primary-foreground md:text-5xl">Targeted Display Creative</h1>
+          <h1 className="text-4xl font-medium text-primary-foreground md:text-5xl">Targeted Display Creative</h1>
         </div>
       </section>
       <nav aria-label="Breadcrumb" className="border-b border-border">
@@ -122,7 +122,7 @@ const TargetedDisplayCreative = () => {
       <section className="border-b border-border py-20 md:py-24">
         <div className="container mx-auto grid items-center gap-12 px-4 lg:grid-cols-2 lg:gap-20">
           <div>
-            <h2 className="mb-6 text-3xl font-bold leading-tight text-foreground md:text-[2.5rem]">
+            <h2 className="mb-6 text-3xl font-medium leading-tight text-foreground md:text-[2.5rem]">
               <span className={RED_TEXT}>Professionally Designed Display Ads,</span> Built for the Web, Ready to Launch
             </h2>
             <p className="mb-6 leading-relaxed text-muted-foreground">
@@ -144,7 +144,7 @@ const TargetedDisplayCreative = () => {
         <div className="container mx-auto grid items-center gap-12 px-4 lg:grid-cols-2 lg:gap-16">
           <img src={`${IMG}/meeting.jpg`} alt="Woman presenting ad concepts at a whiteboard" width={800} height={600} loading="lazy" className="w-full rounded-3xl object-cover" />
           <div>
-            <h2 className="mb-6 text-3xl font-bold text-foreground md:text-4xl">What We <span className={RED_TEXT}>Handle</span></h2>
+            <h2 className="mb-6 text-3xl font-medium text-foreground md:text-4xl">What We <span className={RED_TEXT}>Handle</span></h2>
             <ul>
               {handle.map(({ icon: Icon, title, text }, i) => (
                 <li key={title} className={`flex gap-6 py-6 ${i < handle.length - 1 ? "border-b border-border" : ""}`}>
@@ -152,7 +152,7 @@ const TargetedDisplayCreative = () => {
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
                   <div>
-                    <h3 className="mb-2 text-xl font-semibold text-foreground">{title}</h3>
+                    <h3 className="mb-2 text-xl font-medium text-foreground">{title}</h3>
                     <p className="leading-relaxed text-muted-foreground">{text}</p>
                   </div>
                 </li>
@@ -165,7 +165,7 @@ const TargetedDisplayCreative = () => {
       {/* Video */}
       <section className="bg-gradient-to-b from-[#111111] to-[#2a2a2a] py-20 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold text-primary-foreground md:text-4xl">The Digital Advertising Ecosystem, Explained</h2>
+          <h2 className="mb-12 text-center text-3xl font-medium text-primary-foreground md:text-4xl">The Digital Advertising Ecosystem, Explained</h2>
           <div className="mx-auto aspect-video max-w-6xl overflow-hidden">
             <iframe
               className="h-full w-full"
@@ -182,7 +182,7 @@ const TargetedDisplayCreative = () => {
       {/* Formats */}
       <section className={`${TAN} py-20 md:py-24`}>
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">Ad Formats We Design</h2>
+          <h2 className="mb-12 text-center text-3xl font-medium text-foreground md:text-4xl">Ad Formats We Design</h2>
           <div className="grid gap-8 md:grid-cols-2">
             {formats.map((f) => (
               <div key={f.title} className="overflow-hidden rounded-3xl border border-border bg-[#ffffff]">
@@ -191,7 +191,7 @@ const TargetedDisplayCreative = () => {
                 </div>
                 <div className="p-8">
                   <p className="mb-2 text-sm text-muted-foreground">{f.label}</p>
-                  <h3 className="mb-3 text-xl font-semibold text-foreground">{f.title.replace(/\b\w/g, (c) => c.toUpperCase())}</h3>
+                  <h3 className="mb-3 text-xl font-medium text-foreground">{f.title.replace(/\b\w/g, (c) => c.toUpperCase())}</h3>
                   <p className="text-muted-foreground">{f.text}</p>
                 </div>
               </div>
@@ -203,14 +203,14 @@ const TargetedDisplayCreative = () => {
       {/* Placements */}
       <section className="py-20 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-4 text-center text-3xl font-bold text-foreground md:text-4xl">Where Your Ads Are Designed to Run</h2>
+          <h2 className="mb-4 text-center text-3xl font-medium text-foreground md:text-4xl">Where Your Ads Are Designed to Run</h2>
           <p className="mb-12 text-center text-lg text-muted-foreground">We design display creative for the web-based placements your business actually uses:</p>
           <div className="grid gap-8 md:grid-cols-3">
             {placements.map((p) => (
               <div key={p.title} className="overflow-hidden rounded-3xl border border-border">
                 <img src={`${IMG}/${p.img}`} alt={p.alt} width={600} height={450} loading="lazy" className="aspect-[4/3] w-full object-cover" />
                 <div className="p-8">
-                  <h3 className="mb-3 text-xl font-semibold text-foreground">{p.title}</h3>
+                  <h3 className="mb-3 text-xl font-medium text-foreground">{p.title}</h3>
                   <p className="text-muted-foreground">{p.text}</p>
                 </div>
               </div>
@@ -222,12 +222,12 @@ const TargetedDisplayCreative = () => {
       {/* How It Works */}
       <section className={`${GRAY} py-20 md:py-24`}>
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">How It Works</h2>
+          <h2 className="mb-12 text-center text-3xl font-medium text-foreground md:text-4xl">How It Works</h2>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((s, i) => (
               <div key={s.title} className="rounded-2xl border border-border bg-[#ffffff] p-8">
                 <span className="mb-6 block text-6xl font-bold text-muted-foreground">{i + 1}</span>
-                <h3 className="mb-5 text-xl font-semibold text-foreground">{s.title}</h3>
+                <h3 className="mb-5 text-xl font-medium text-foreground">{s.title}</h3>
                 <p className="leading-relaxed text-muted-foreground">{s.text}</p>
               </div>
             ))}
@@ -240,7 +240,7 @@ const TargetedDisplayCreative = () => {
         <div className="container mx-auto px-4">
           <div className={`${RED} mx-auto grid max-w-6xl items-center gap-10 rounded-3xl px-8 py-12 md:grid-cols-[1fr_auto] md:px-20`}>
             <div>
-              <h2 className="mb-5 text-3xl font-bold text-primary-foreground md:text-4xl">It’s Yours</h2>
+              <h2 className="mb-5 text-3xl font-medium text-primary-foreground md:text-4xl">It’s Yours</h2>
               <p className="text-lg leading-relaxed text-primary-foreground">
                 Once your project is complete and paid for, <strong>you have an unrestricted license from us to every final creative file,</strong> no restrictions and you can do what you want with it. It is ready to launch wherever your campaign runs. We still maintain authoring rights, technically, but we give you a full license to use or modify the creative as you wish.
               </p>
@@ -253,7 +253,7 @@ const TargetedDisplayCreative = () => {
       {/* Concepts */}
       <section className="pb-20 pt-8 md:pb-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-4xl font-bold text-foreground md:text-5xl">Advertising Design Concepts</h2>
+          <h2 className="mb-12 text-center text-4xl font-medium text-foreground md:text-5xl">Advertising Design Concepts</h2>
           <div className="columns-1 gap-6 md:columns-2">
             {concepts.map(([img, label]) => (
               <figure key={img} className={`${GRAY} mb-6 break-inside-avoid rounded-xl p-3 text-center`}>
@@ -269,7 +269,7 @@ const TargetedDisplayCreative = () => {
       {/* Pricing */}
       <section className="bg-[#111111] py-20 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-6 text-center text-5xl font-bold text-primary-foreground md:text-6xl">Pricing</h2>
+          <h2 className="mb-6 text-center text-5xl font-medium text-primary-foreground md:text-6xl">Pricing</h2>
           <h3 className="mb-8 text-center text-3xl font-medium text-primary-foreground">Creative Packages</h3>
           <div className="grid gap-8 md:grid-cols-3">
             {packages.map((p, i) => {
@@ -297,7 +297,7 @@ const TargetedDisplayCreative = () => {
               ["Landing page design / build", "Final price depends on scope", "$1,200–$3,000", ""],
             ].map(([t, d, price, unit]) => (
               <div key={t} className="flex items-center justify-between gap-4 px-7 py-6">
-                <div><h4 className="text-lg font-semibold text-primary-foreground">{t}</h4><p className="text-sm text-primary-foreground/70">{d}</p></div>
+                <div><h4 className="text-lg font-medium text-primary-foreground">{t}</h4><p className="text-sm text-primary-foreground/70">{d}</p></div>
                 <p className="text-right text-2xl font-bold text-primary-foreground">{price} {unit && <span className="text-sm font-normal text-primary-foreground/70">{unit}</span>}</p>
               </div>
             ))}
@@ -309,14 +309,14 @@ const TargetedDisplayCreative = () => {
       {/* Who */}
       <section className="py-20 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">Who This Is For</h2>
+          <h2 className="mb-12 text-center text-3xl font-medium text-foreground md:text-4xl">Who This Is For</h2>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {audiences.map(({ icon: Icon, title, text }) => (
               <div key={title} className={`${TAN} rounded-2xl border border-border p-8`}>
                 <span className="mb-8 flex h-16 w-16 items-center justify-center rounded-xl bg-[#ffffff]">
                   <Icon className={`h-8 w-8 ${RED_TEXT}`} strokeWidth={1.5} aria-hidden="true" />
                 </span>
-                <h3 className="mb-4 text-xl font-semibold text-foreground">{title}</h3>
+                <h3 className="mb-4 text-xl font-medium text-foreground">{title}</h3>
                 <p className="leading-relaxed text-muted-foreground">{text}</p>
               </div>
             ))}
@@ -329,13 +329,13 @@ const TargetedDisplayCreative = () => {
         <div className="container mx-auto grid gap-12 px-4 lg:grid-cols-[2fr_3fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className={`mb-4 text-sm font-semibold uppercase tracking-widest ${RED_TEXT}`}>FAQs</p>
-            <h2 className="mb-8 text-3xl font-bold text-foreground md:text-4xl">Frequently Asked Questions</h2>
+            <h2 className="mb-8 text-3xl font-medium text-foreground md:text-4xl">Frequently Asked Questions</h2>
             <Pill>Ask Us Anything</Pill>
           </div>
           <div className="space-y-4">
             {faqs.map(([q, a]) => (
               <div key={q} className="rounded-xl bg-[#ffffff] p-6">
-                <h3 className="mb-4 text-lg font-semibold text-foreground">{q}</h3>
+                <h3 className="mb-4 text-lg font-medium text-foreground">{q}</h3>
                 <p className="leading-relaxed text-muted-foreground">{a}</p>
               </div>
             ))}
@@ -347,7 +347,7 @@ const TargetedDisplayCreative = () => {
       <section className={`${RED} py-16`}>
         <div className="container mx-auto flex flex-col items-start gap-8 px-4 md:flex-row md:items-center md:justify-between">
           <div className="max-w-3xl">
-            <h2 className="mb-4 text-3xl font-bold text-primary-foreground md:text-4xl">Ready to Get Professional Display Ad Creative?</h2>
+            <h2 className="mb-4 text-3xl font-medium text-primary-foreground md:text-4xl">Ready to Get Professional Display Ad Creative?</h2>
             <p className="text-lg text-primary-foreground/85">Tell us about your brand, your goals, and the sizes you need, we’ll put together a creative package that fits.</p>
           </div>
           <Pill variant="white">Get a Free Creative Quote</Pill>

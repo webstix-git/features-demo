@@ -53,12 +53,6 @@ const concepts = [
   ["honest-abe-roofing_a2_example-970x250-px.gif", "300×250, 728×90, 160×600"],
 ];
 
-const packages = [
-  { name: "Social Image", price: "40", desc: "1080×1080 static image with ad copy", rows: [["Format", "1 static image"]] },
-  { name: "Static Banner Bundle", price: "90", desc: "5 standard sizes", rows: [["Revisions included", "2"], ["Each extra revision", "$20"]] },
-  { name: "Animated GIF Banner Bundle", price: "110", desc: "5 standard sizes", rows: [["Revisions included", "2"], ["Each extra revision", "$50"]] },
-];
-
 const audiences = [
   { icon: MapPin, title: "Local service businesses", text: "Plumbers, HVAC, electricians, dentists, lawyers, chiropractors" },
   { icon: ShoppingCart, title: "Retail & restaurants", text: "Promoting sales, new locations, or seasonal menus" },

@@ -274,7 +274,6 @@ const TargetedDisplayCreative = () => {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <p className={`mb-4 text-sm font-semibold uppercase tracking-widest ${RED_TEXT}`}>FAQs</p>
             <h2 className="mb-8 text-3xl font-medium text-foreground md:text-4xl">Frequently Asked Questions</h2>
-            <Pill>Ask Us Anything</Pill>
           </div>
           <div className="space-y-4">
             {faqs.map(([q, a]) => (

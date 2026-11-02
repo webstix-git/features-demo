@@ -10,6 +10,7 @@ const pages = [
   { name: "Testimonials", path: "/testimonials" },
   { name: "Our Team", path: "/team" },
   { name: "Meet the Team", path: "/meet-the-team" },
+  { name: "Targeted Display Creative", path: "/targeted-display-creative" },
   { name: "FAQs", path: "/faqs" },
   { name: "Contact", path: "/contact" },
   { name: "Sales Tips", path: "/tips" },

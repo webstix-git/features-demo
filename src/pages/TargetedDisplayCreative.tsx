@@ -71,15 +71,6 @@ const faqs = [
   ["What's the difference between Display Ads and Google Search Ads?", "Google Search Ads capture existing demand, someone searches “plumber near me” and your ad appears. Display ads create demand, they put your business in front of people before they search. They work well together, though Webstix’s role here is the display creative, not the search campaign."],
 ];
 
-const Pill = ({ children, variant = "red" }: { children: React.ReactNode; variant?: "red" | "white" }) => (
-  <Link
-    to="/contact"
-    className={`inline-flex items-center gap-2 rounded-full px-8 py-3.5 font-medium transition-all duration-200 hover:-translate-y-0.5 ${
-      variant === "red" ? `${RED} text-primary-foreground hover:opacity-90` : "bg-[#ffffff] text-foreground hover:bg-muted"
-    }`}
-  >
-    {children} {variant === "red" && <ArrowRight className="h-4 w-4" />}
-  </Link>
 );
 
 const TargetedDisplayCreative = () => {

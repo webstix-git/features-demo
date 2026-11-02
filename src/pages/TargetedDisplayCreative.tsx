@@ -81,7 +81,7 @@ const Pill = ({ children, variant = "red" }: { children: React.ReactNode; varian
   <Link
     to="/contact"
     className={`inline-flex items-center gap-2 rounded-full px-8 py-3.5 font-medium transition-all duration-200 hover:-translate-y-0.5 ${
-      variant === "red" ? `${RED} text-primary-foreground hover:opacity-90` : "bg-background text-foreground hover:bg-muted"
+      variant === "red" ? `${RED} text-primary-foreground hover:opacity-90` : "bg-[#ffffff] text-foreground hover:bg-muted"
     }`}
   >
     {children} {variant === "red" && <ArrowRight className="h-4 w-4" />}
@@ -102,11 +102,11 @@ const TargetedDisplayCreative = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#ffffff]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Banner */}
-      <section className="relative overflow-hidden bg-foreground">
+      <section className="relative overflow-hidden bg-[#111111]">
         <img src={`${IMG}/display-network.jpg`} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover opacity-30" />
         <div className="relative container mx-auto px-4 py-24 text-center md:py-28">
           <h1 className="text-4xl font-bold text-primary-foreground md:text-5xl">Targeted Display Creative</h1>
@@ -163,7 +163,7 @@ const TargetedDisplayCreative = () => {
       </section>
 
       {/* Video */}
-      <section className="bg-gradient-to-b from-foreground to-foreground/90 py-20 md:py-24">
+      <section className="bg-gradient-to-b from-[#111111] to-[#2a2a2a] py-20 md:py-24">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold text-primary-foreground md:text-4xl">The Digital Advertising Ecosystem, Explained</h2>
           <div className="mx-auto aspect-video max-w-6xl overflow-hidden">
@@ -185,7 +185,7 @@ const TargetedDisplayCreative = () => {
           <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">Ad Formats We Design</h2>
           <div className="grid gap-8 md:grid-cols-2">
             {formats.map((f) => (
-              <div key={f.title} className="overflow-hidden rounded-3xl border border-border bg-background">
+              <div key={f.title} className="overflow-hidden rounded-3xl border border-border bg-[#ffffff]">
                 <div className="flex aspect-[4/3] items-center justify-center bg-muted">
                   <img src={`${IMG}/${f.img}`} alt={`${f.title} example`} loading="lazy" className="h-full w-full object-cover" />
                 </div>
@@ -225,7 +225,7 @@ const TargetedDisplayCreative = () => {
           <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">How It Works</h2>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((s, i) => (
-              <div key={s.title} className="rounded-2xl border border-border bg-background p-8">
+              <div key={s.title} className="rounded-2xl border border-border bg-[#ffffff] p-8">
                 <span className="mb-6 block text-6xl font-bold text-muted-foreground">{i + 1}</span>
                 <h3 className="mb-5 text-xl font-semibold text-foreground">{s.title}</h3>
                 <p className="leading-relaxed text-muted-foreground">{s.text}</p>
@@ -267,7 +267,7 @@ const TargetedDisplayCreative = () => {
       </section>
 
       {/* Pricing */}
-      <section className="bg-foreground py-20 md:py-24">
+      <section className="bg-[#111111] py-20 md:py-24">
         <div className="container mx-auto px-4">
           <h2 className="mb-6 text-center text-5xl font-bold text-primary-foreground md:text-6xl">Pricing</h2>
           <h3 className="mb-8 text-center text-3xl font-medium text-primary-foreground">Creative Packages</h3>
@@ -313,7 +313,7 @@ const TargetedDisplayCreative = () => {
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {audiences.map(({ icon: Icon, title, text }) => (
               <div key={title} className={`${TAN} rounded-2xl border border-border p-8`}>
-                <span className="mb-8 flex h-16 w-16 items-center justify-center rounded-xl bg-background">
+                <span className="mb-8 flex h-16 w-16 items-center justify-center rounded-xl bg-[#ffffff]">
                   <Icon className={`h-8 w-8 ${RED_TEXT}`} strokeWidth={1.5} aria-hidden="true" />
                 </span>
                 <h3 className="mb-4 text-xl font-semibold text-foreground">{title}</h3>
@@ -334,7 +334,7 @@ const TargetedDisplayCreative = () => {
           </div>
           <div className="space-y-4">
             {faqs.map(([q, a]) => (
-              <div key={q} className="rounded-xl bg-background p-6">
+              <div key={q} className="rounded-xl bg-[#ffffff] p-6">
                 <h3 className="mb-4 text-lg font-semibold text-foreground">{q}</h3>
                 <p className="leading-relaxed text-muted-foreground">{a}</p>
               </div>

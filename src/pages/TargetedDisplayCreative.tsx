@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Target, PenTool, Palette, RefreshCw, MapPin, ShoppingCart, Briefcase, CalendarDays, Sparkles } from "lucide-react";
+import { Target, PenTool, Palette, RefreshCw, MapPin, ShoppingCart, Briefcase, CalendarDays, Sparkles } from "lucide-react";
 
 const IMG = "/images/display-creative";
 const TAN = "bg-[#f8f1ec]";
